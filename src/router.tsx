@@ -1,10 +1,13 @@
+import BlogPage from "@/routes/blog";
+import BlogDetailsPage from "@/routes/blog/details";
+import ContactPage from "@/routes/contact";
+import HomePage from "@/routes/home/home";
+import Layout from "@/routes/layout";
+import NotFoundPage from "@/routes/not-found";
+import PortfolioPage from "@/routes/portfolio";
+import PortfolioDetailsPage from "@/routes/portfolio/details";
+import ResumePage from "@/routes/resume";
 import { createBrowserRouter } from "react-router-dom";
-import ContactPage from "./routes/contact";
-import HomePage from "./routes/home/home";
-import Layout from "./routes/layout";
-import NotFoundPage from "./routes/not-found";
-import ProjectsPage from "./routes/projects";
-import ProjectDetailsPage from "./routes/projects/details";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +20,24 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: "/resume",
+        element: <ResumePage />,
+      },
+      {
         path: "/projects",
-        element: <ProjectsPage />,
+        element: <PortfolioPage />,
       },
       {
         path: "/projects/:projectId",
-        element: <ProjectDetailsPage />,
+        element: <PortfolioDetailsPage />,
+      },
+      {
+        path: "/blog",
+        element: <BlogPage />,
+      },
+      {
+        path: "/blog/:blogId",
+        element: <BlogDetailsPage />,
       },
       {
         path: "/contact",
