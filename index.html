@@ -14,5 +14,31 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <div id="custom-right-menu">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const customMenu = document.getElementById("custom-right-menu");
+        document.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+          showCustomMenu(e);
+        });
+        document.addEventListener("click", () => {
+          hideCustomMenu();
+        });
+        function showCustomMenu(e) {
+          customMenu.style.display = "block";
+          customMenu.style.left = `${e.pageX}px`;
+          customMenu.style.top = `${e.pageY}px`;
+        }
+
+        function hideCustomMenu() {
+          customMenu.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
