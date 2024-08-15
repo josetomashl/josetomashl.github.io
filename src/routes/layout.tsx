@@ -1,13 +1,13 @@
+import ProfileCard from "@/components/ProfileCard";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <>
-      <aside>information about me</aside>
+    <div className="layout">
+      <ProfileCard />
       <div id="pages">
-        <nav>Sidebar</nav>
         <Outlet />
       </div>
-    </>
+    </div>
   );
 }
