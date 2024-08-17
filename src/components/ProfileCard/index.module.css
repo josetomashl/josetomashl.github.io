@@ -15,7 +15,6 @@
 }
 
 /* HEADER */
-
 .profileContainer {
   display: flex;
   flex-direction: column;
@@ -61,21 +60,14 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 16px;
-}
-.infoItem img {
-  padding: 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-.infoItem img:hover {
-  background-color: var(--dark-gray);
+  gap: 24px;
 }
 .infoHeader {
   text-transform: uppercase;
   color: var(--gray);
   font-weight: 400;
 }
+
 /* FOOTER */
 .socialMediaContainer {
   display: flex;

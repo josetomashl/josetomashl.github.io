@@ -1,17 +1,11 @@
-import { useState } from "react";
+import useShare from "@/hooks/useShare";
 import { Link } from "react-router-dom";
+import Icon from "../Icon";
 import Separator from "../Separator";
 import styles from "./index.module.css";
 
 export default function ProfileCard() {
-  const [sharedLink, setSharedLink] = useState(false);
-  const shareLink = () => {
-    setSharedLink(true);
-    navigator.clipboard.writeText(window.location.href);
-    setTimeout(() => {
-      setSharedLink(false);
-    }, 1500);
-  };
+  const { isShared, share } = useShare();
 
   return (
     <aside className={styles.container}>
@@ -35,7 +29,7 @@ export default function ProfileCard() {
             to={`mailto:josetomas.hlopez@gmail.com?subject=Contact request from "${window.location.href}"`}
             target="_blank"
           >
-            <img src="/icons/email.svg" alt="email address" />
+            <Icon name="email" />
           </Link>
           <div>
             <h5 className={styles.infoHeader}>EMAIL</h5>
@@ -44,7 +38,7 @@ export default function ProfileCard() {
         </div>
         <div className={styles.infoItem}>
           <Link to={`tel:+34601286000`} target="_blank">
-            <img src="/icons/phone.svg" alt="mobile phone" />
+            <Icon name="phone" />
           </Link>
           <div>
             <h5 className={styles.infoHeader}>PHONE</h5>
@@ -60,8 +54,8 @@ export default function ProfileCard() {
         <a href="https://github.com/josetomashl" target="_blank">
           <img src="/icons/github.svg" alt="GitHub profile link" loading="lazy" />
         </a>
-        <a href="#" onClick={shareLink}>
-          <img src={sharedLink ? "/icons/check.svg" : "/icons/link.svg"} alt="Link to this website" loading="lazy" />
+        <a href="#" onClick={share}>
+          <Icon name={isShared ? "check" : "link"} />
         </a>
       </div>
     </aside>

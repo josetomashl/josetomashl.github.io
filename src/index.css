@@ -70,21 +70,23 @@ body {
 }
 #custom-right-menu {
   position: absolute;
-  display: none;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  background-color: var(--light);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
   z-index: 1000;
+  overflow: hidden;
 }
 #custom-right-menu a {
-  display: block;
-  padding: 5px 10px;
-  color: #333;
+  display: flex;
+  padding: 6px;
+  color: var(--dark);
   text-decoration: none;
+  align-items: center;
+  gap: 8px;
 }
 #custom-right-menu a:hover {
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 /* LAYOUT */
