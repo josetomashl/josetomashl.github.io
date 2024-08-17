@@ -13,13 +13,15 @@
   align-items: center;
   gap: 20px;
 }
+
+/* HEADER */
+
 .profileContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-
 .avatar {
   width: 160px;
   aspect-ratio: 1/1;
@@ -37,24 +39,50 @@
 .avatar:hover > .avatarImage {
   transform: scale(1.2);
 }
-
 .name {
   text-align: center;
 }
-
 .badge {
   border-radius: 6px;
   background-color: var(--dark-gray);
   padding: 6px 18px;
 }
 
+/* NAV */
+.infoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.infoItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+.infoItem img {
+  padding: 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.infoItem img:hover {
+  background-color: var(--dark-gray);
+}
+.infoHeader {
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 400;
+}
+/* FOOTER */
 .socialMediaContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
 }
-
 .socialMediaContainer > a {
   background-color: var(--dark-gray);
   width: 42px;
@@ -65,7 +93,6 @@
   border-radius: 6px;
   transition: all 0.4s ease;
 }
-
 .socialMediaContainer > a:hover {
   box-shadow: var(--white-shadow);
 }
