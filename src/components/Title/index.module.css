@@ -1,0 +1,10 @@
+.container {
+  padding: 10px 0;
+}
+.line {
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--orange);
+  margin-top: 4px;
+}

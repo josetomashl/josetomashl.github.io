@@ -1,3 +1,9 @@
+import Title from "@/components/Title";
+
 export default function ResumePage() {
-  return <p>Resume</p>;
+  return (
+    <div>
+      <Title content="Resume" />
+    </div>
+  );
 }

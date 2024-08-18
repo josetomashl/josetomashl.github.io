@@ -33,7 +33,7 @@ export default function ProfileCard() {
           </Link>
           <div>
             <h5 className={styles.infoHeader}>EMAIL</h5>
-            <p>josetomash.lopez@gmail.com</p>
+            <p>josetomas.hlopez@gmail.com</p>
           </div>
         </div>
         <div className={styles.infoItem}>

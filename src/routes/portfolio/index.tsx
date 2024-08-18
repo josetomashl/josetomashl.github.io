@@ -1,3 +1,9 @@
+import Title from "@/components/Title";
+
 export default function PortfolioPage() {
-  return <p>Projects</p>;
+  return (
+    <div>
+      <Title content="Portfolio" />
+    </div>
+  );
 }
