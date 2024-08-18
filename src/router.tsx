@@ -8,6 +8,7 @@ import PortfolioDetailsPage from "@/routes/portfolio/details";
 import ResumePage from "@/routes/resume";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import AboutPage from "./routes/about";
+import SettingsPage from "./routes/settings";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         element: <PortfolioPage />,
       },
       {
-        path: "/porfolio/:projectId",
+        path: "/portfolio/:projectId",
         element: <PortfolioDetailsPage />,
       },
       {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/settings",
+        element: <SettingsPage />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 import useShare from "@/hooks/useShare";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../Icon";
 import Separator from "../Separator";
@@ -6,6 +7,8 @@ import styles from "./index.module.css";
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
+
+  const [settingsHover, setSettgingsHover] = useState(false);
 
   return (
     <aside className={styles.container}>
@@ -57,6 +60,14 @@ export default function ProfileCard() {
         <a href="#" onClick={share}>
           <Icon name={isShared ? "check" : "link"} />
         </a>
+        <Link
+          to="/settings"
+          className={settingsHover ? styles.settingsMove : styles.settings}
+          onMouseEnter={() => setSettgingsHover(true)}
+          onMouseLeave={() => setSettgingsHover(false)}
+        >
+          <Icon name="settings" />
+        </Link>
       </div>
     </aside>
   );
