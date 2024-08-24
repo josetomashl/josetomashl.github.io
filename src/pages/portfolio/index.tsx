@@ -1,3 +1,4 @@
+import Empty from "@/components/empty";
 import Title from "@/components/Title";
 import { ProjectCategoryType, PROJECTS, ProjectType } from "@/data/projects";
 import { useEffect, useState } from "react";
@@ -34,14 +35,18 @@ export default function PortfolioPage() {
         </span>
       </div>
       <div className={styles.projectsContainer}>
-        {filteredProjects.map((project, index) => (
-          <Link to={`/portfolio/${project.id}`} key={index} className={styles.projectItem}>
-            {/* <img src="" alt="" /> */}
-            <span className={styles.projectBadge}>{project.category}</span>
-            <p className={styles.projectTitle}>{project.title}</p>
-            <p className={styles.projectDescription}>{project.description}</p>
-          </Link>
-        ))}
+        {filteredProjects.length ? (
+          filteredProjects.map((project, index) => (
+            <Link to={`/portfolio/${project.id}`} key={index} className={styles.projectItem}>
+              {/* <img src="" alt="" /> */}
+              <span className={styles.projectBadge}>{project.category}</span>
+              <p className={styles.projectTitle}>{project.title}</p>
+              <p className={styles.projectDescription}>{project.description}</p>
+            </Link>
+          ))
+        ) : (
+          <Empty />
+        )}
       </div>
     </div>
   );

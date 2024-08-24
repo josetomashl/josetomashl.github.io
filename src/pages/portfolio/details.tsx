@@ -1,7 +1,8 @@
 import { PROJECTS, ProjectType } from "@/data/projects";
 import { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import LoadingPage from "../loading";
+import NotFoundPage from "../not-found";
 
 export default function PortfolioDetailsPage() {
   const { projectId } = useParams();
@@ -18,7 +19,7 @@ export default function PortfolioDetailsPage() {
     if (!loaded) {
       return <LoadingPage />;
     } else {
-      return <Navigate to="/portfolio" replace />;
+      return <NotFoundPage />;
     }
   }
   return <p>Project details: {projectId}</p>;

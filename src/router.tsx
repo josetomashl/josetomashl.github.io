@@ -1,14 +1,14 @@
-import BlogPage from "@/routes/blog";
-import BlogDetailsPage from "@/routes/blog/details";
-import ContactPage from "@/routes/contact";
-import Layout from "@/routes/layout";
-import NotFoundPage from "@/routes/not-found";
-import PortfolioPage from "@/routes/portfolio";
-import PortfolioDetailsPage from "@/routes/portfolio/details";
-import ResumePage from "@/routes/resume";
+import BlogPage from "@/pages/blog";
+import BlogDetailsPage from "@/pages/blog/details";
+import ContactPage from "@/pages/contact";
+import Layout from "@/pages/layout";
+import NotFoundPage from "@/pages/not-found";
+import PortfolioPage from "@/pages/portfolio";
+import PortfolioDetailsPage from "@/pages/portfolio/details";
+import ResumePage from "@/pages/resume";
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import AboutPage from "./routes/about";
-import SettingsPage from "./routes/settings";
+import AboutPage from "./pages/about";
+import SettingsPage from "./pages/settings";
 
 const router = createBrowserRouter([
   {
