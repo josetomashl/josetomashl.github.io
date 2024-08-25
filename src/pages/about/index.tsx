@@ -1,5 +1,5 @@
 import Title from "@/components/Title";
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 
 export default function AboutPage() {
   return (

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 
 export default function Navigation() {
   const location = useLocation();

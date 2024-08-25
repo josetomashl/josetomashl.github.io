@@ -18,13 +18,31 @@
 .projectItem {
   background-color: var(--background);
   border-radius: 6px;
-  padding: 10px;
   box-shadow: var(--shadow);
   flex-basis: 33.33%;
   text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+.projectImage {
+  max-width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  aspect-ratio: 16/9;
+}
+.projectImage:hover {
+  transform: scale(1.08);
+}
+.projectDetails {
+  padding: 10px;
 }
 .projectBadge {
-  float: right;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  /* float: right; */
   padding: 3px 6px;
   border-radius: 4px;
   background-color: var(--dark);

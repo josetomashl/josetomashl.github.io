@@ -1,8 +1,9 @@
+import Back from "@/components/Back";
 import { PROJECTS, ProjectType } from "@/data/projects";
+import LoadingPage from "@/pages/loading";
+import NotFoundPage from "@/pages/not-found";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import LoadingPage from "../loading";
-import NotFoundPage from "../not-found";
 
 export default function PortfolioDetailsPage() {
   const { projectId } = useParams();
@@ -22,5 +23,12 @@ export default function PortfolioDetailsPage() {
       return <NotFoundPage />;
     }
   }
-  return <p>Project details: {projectId}</p>;
+
+  return (
+    <div>
+      <Back to="/portfolio" />
+      <p>Project details: {projectId}</p>
+      <p>{JSON.stringify(projectDetails, null, 2)}</p>
+    </div>
+  );
 }

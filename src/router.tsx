@@ -1,3 +1,4 @@
+import AboutPage from "@/pages/about";
 import BlogPage from "@/pages/blog";
 import BlogDetailsPage from "@/pages/blog/details";
 import ContactPage from "@/pages/contact";
@@ -6,9 +7,8 @@ import NotFoundPage from "@/pages/not-found";
 import PortfolioPage from "@/pages/portfolio";
 import PortfolioDetailsPage from "@/pages/portfolio/details";
 import ResumePage from "@/pages/resume";
+import SettingsPage from "@/pages/settings";
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import AboutPage from "./pages/about";
-import SettingsPage from "./pages/settings";
 
 const router = createBrowserRouter([
   {

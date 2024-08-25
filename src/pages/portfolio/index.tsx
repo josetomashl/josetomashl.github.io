@@ -1,9 +1,9 @@
-import Empty from "@/components/empty";
+import Empty from "@/components/Empty";
 import Title from "@/components/Title";
 import { ProjectCategoryType, PROJECTS, ProjectType } from "@/data/projects";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 
 export default function PortfolioPage() {
   const [category, setCategory] = useState<ProjectCategoryType>();
@@ -36,18 +36,26 @@ export default function PortfolioPage() {
       </div>
       <div className={styles.projectsContainer}>
         {filteredProjects.length ? (
-          filteredProjects.map((project, index) => (
-            <Link to={`/portfolio/${project.id}`} key={index} className={styles.projectItem}>
-              {/* <img src="" alt="" /> */}
-              <span className={styles.projectBadge}>{project.category}</span>
-              <p className={styles.projectTitle}>{project.title}</p>
-              <p className={styles.projectDescription}>{project.description}</p>
-            </Link>
-          ))
+          filteredProjects.map((project, index) => <PortfolioItem key={index} project={project} />)
         ) : (
           <Empty />
         )}
       </div>
     </div>
+  );
+}
+
+function PortfolioItem({ project }: { project: ProjectType }) {
+  return (
+    <Link to={`/portfolio/${project.id}`} key={project.id} className={styles.projectItem}>
+      {project.image && (
+        <img src={project.image.path} alt={project.image.alt} className={styles.projectImage} loading="lazy" />
+      )}
+      <div className={styles.projectDetails}>
+        <span className={styles.projectBadge}>{project.category}</span>
+        <p className={styles.projectTitle}>{project.title}</p>
+        <p className={styles.projectDescription}>{project.description}</p>
+      </div>
+    </Link>
   );
 }

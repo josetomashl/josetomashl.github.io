@@ -1,13 +1,12 @@
+import Icon from "@/components/Icon";
+import Separator from "@/components/Separator";
 import useShare from "@/hooks/useShare";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Icon from "../Icon";
-import Separator from "../Separator";
-import styles from "./index.module.css";
+import styles from "./styles.module.css";
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
-
   const [settingsHover, setSettgingsHover] = useState(false);
 
   return (
