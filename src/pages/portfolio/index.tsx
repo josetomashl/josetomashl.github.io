@@ -22,7 +22,7 @@ export default function PortfolioPage() {
 
   return (
     <div>
-      <Title content="Portfolio" />
+      <Title content="Projects" />
       <div className={styles.categories}>
         <span className={!category ? styles.selected : undefined} onClick={() => selectCategory(undefined)}>
           All
@@ -49,7 +49,9 @@ function PortfolioItem({ project }: { project: ProjectType }) {
   return (
     <Link to={`/portfolio/${project.id}`} key={project.id} className={styles.projectItem}>
       {project.image && (
-        <img src={project.image.path} alt={project.image.alt} className={styles.projectImage} loading="lazy" />
+        <div className={styles.projectImage}>
+          <img src={project.image.path} alt={project.image.alt} loading="lazy" />
+        </div>
       )}
       <div className={styles.projectDetails}>
         <span className={styles.projectBadge}>{project.category}</span>

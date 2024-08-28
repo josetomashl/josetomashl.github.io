@@ -1,4 +1,4 @@
-type IconNames = "settings" | "link" | "email" | "phone" | "linkedin" | "github" | "check" | "arrowLeft";
+type IconNames = "settings" | "link" | "email" | "phone" | "linkedin" | "github" | "check" | "arrowLeft" | "download";
 
 type IconProps = {
   name: IconNames;
@@ -20,6 +20,8 @@ export default function Icon(props: IconProps) {
 
 const ICONS: { [IconNames: string]: string } = {
   arrowLeft: "M4 12h16M9 17s-5-3.682-5-5 5-5 5-5",
+  download:
+    "M12 14.5v-10m0 10c-.7 0-2.008-1.994-2.5-2.5m2.5 2.5c.7 0 2.008-1.994 2.5-2.5M20 16.5c0 2.482-.518 3-3 3H7c-2.482 0-3-.518-3-3",
   link: "M9.143 10.691l.207-.207a5.067 5.067 0 117.166 7.166l-2.866 2.866a5.067 5.067 0 11-7.166-7.166l.464-.464 M17.052 11.114l.464-.464a5.067 5.067 0 10-7.166-7.166L7.484 6.35a5.067 5.067 0 107.166 7.166l.207-.207",
   check: "M5 14l3.5 3.5L19 6.5",
   linkedin:

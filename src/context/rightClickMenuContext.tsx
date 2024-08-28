@@ -1,9 +1,11 @@
 import Icon from "@/components/Icon";
+import useDownload from "@/hooks/useDownload";
 import useShare from "@/hooks/useShare";
 import { useEffect, useState } from "react";
 
 const CustomContextMenu = () => {
   const { share } = useShare();
+  const { download } = useDownload("asd");
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 
@@ -38,6 +40,16 @@ const CustomContextMenu = () => {
       <a
         href="#"
         onClick={() => {
+          download();
+          setMenuVisible(false);
+        }}
+      >
+        <Icon name="download" color="var(--dark-gray)" />
+        Download
+      </a>
+      <a
+        href="#"
+        onClick={() => {
           share();
           setMenuVisible(false);
         }}
@@ -45,7 +57,7 @@ const CustomContextMenu = () => {
         <Icon name="link" color="var(--dark-gray)" />
         Share
       </a>
-      <a href="#" onClick={() => alert("Option 1 clicked")}>
+      <a href="/settings">
         <Icon name="settings" color="var(--dark-gray)" />
         Settings
       </a>

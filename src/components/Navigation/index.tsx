@@ -16,14 +16,14 @@ export default function Navigation() {
       <Link to="/about" className={checkRoute("/about")}>
         About
       </Link>
-      <Link to="/resume" className={checkRoute("/resume")}>
-        Resume
+      <Link to="/education" className={checkRoute("/education")}>
+        Education
+      </Link>
+      <Link to="/experience" className={checkRoute("/experience")}>
+        Experience
       </Link>
       <Link to="/portfolio" className={checkRoute("/portfolio")}>
         Portfolio
-      </Link>
-      <Link to="/blog" className={checkRoute("/blog")}>
-        Blog
       </Link>
       <Link to="/contact" className={checkRoute("/contact")}>
         Contact

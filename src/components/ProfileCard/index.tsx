@@ -1,5 +1,6 @@
 import Icon from "@/components/Icon";
 import Separator from "@/components/Separator";
+import useDownload from "@/hooks/useDownload";
 import useShare from "@/hooks/useShare";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import styles from "./styles.module.css";
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
+  const { isDownloaded, download } = useDownload("asd");
   const [settingsHover, setSettgingsHover] = useState(false);
 
   return (
@@ -50,18 +52,21 @@ export default function ProfileCard() {
       </div>
       <Separator />
       <div className={styles.socialMediaContainer}>
-        <a href="https://www.linkedin.com/in/josetomas-hernandezlopez/" target="_blank">
+        {/* <Link to="https://www.linkedin.com/in/josetomas-hernandezlopez/" target="_blank">
           <img src="/icons/linkedin.svg" alt="LinkedIn profile link" loading="lazy" />
-        </a>
-        <a href="https://github.com/josetomashl" target="_blank">
+        </Link>
+        <Link to="https://github.com/josetomashl" target="_blank">
           <img src="/icons/github.svg" alt="GitHub profile link" loading="lazy" />
+        </Link> */}
+        <a href="#" onClick={download}>
+          <Icon name={isDownloaded ? "check" : "download"} />
         </a>
         <a href="#" onClick={share}>
           <Icon name={isShared ? "check" : "link"} />
         </a>
         <Link
           to="/settings"
-          className={settingsHover ? styles.settingsMove : styles.settings}
+          className={settingsHover ? styles.rotate : undefined}
           onMouseEnter={() => setSettgingsHover(true)}
           onMouseLeave={() => setSettgingsHover(false)}
         >
