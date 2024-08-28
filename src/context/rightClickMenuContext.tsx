@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const CustomContextMenu = () => {
   const { share } = useShare();
-  const { download } = useDownload("asd");
+  const { download } = useDownload("/files/resume-ES.pdf");
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
 

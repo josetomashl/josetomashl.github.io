@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
-  const { isDownloaded, download } = useDownload("asd");
+  const { isDownloaded, download } = useDownload("/files/resume-ES.pdf");
   const [settingsHover, setSettgingsHover] = useState(false);
 
   return (

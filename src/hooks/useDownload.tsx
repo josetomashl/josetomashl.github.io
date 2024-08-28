@@ -10,7 +10,7 @@ const useDownload = (path: string) => {
 
   const download = () => {
     setDownloaded(true);
-    // FIXME download file
+    window.location.assign(path);
     setTimeout(() => {
       setDownloaded(false);
     }, 1500);
