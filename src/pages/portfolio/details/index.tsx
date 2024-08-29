@@ -1,5 +1,5 @@
 import Back from "@/components/Back";
-import { PROJECTS, ProjectType } from "@/data/projects";
+import PROJECTS, { ProjectType } from "@/data/projects";
 import LoadingPage from "@/pages/loading";
 import NotFoundPage from "@/pages/not-found";
 import { useEffect, useState } from "react";

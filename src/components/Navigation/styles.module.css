@@ -13,6 +13,10 @@
 }
 .container > * {
   text-decoration: none;
+  transition: all 0.4s ease;
+}
+.container > *:hover {
+  color: var(--orange);
 }
 .current {
   color: var(--orange);
