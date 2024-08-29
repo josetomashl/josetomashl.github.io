@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
+import ME from "@/data/me";
+
 export default function ProfileCard() {
   const { isShared, share } = useShare();
   const { isDownloaded, download } = useDownload("/files/resume-ES.pdf");
@@ -15,49 +17,40 @@ export default function ProfileCard() {
     <aside className={styles.container}>
       <div className={styles.profileContainer}>
         <div className={styles.avatar}>
-          <img src="/icons/react.svg" alt="profile picture" loading="lazy" className={styles.avatarImage} />
+          <img src={ME.avatar} alt="profile picture" loading="lazy" className={styles.avatarImage} />
         </div>
         <h1 className={styles.name}>
-          José Tomás
+          {ME.name}
           <br />
-          Hernández López
+          {ME.surname}
         </h1>
         <span className={styles.badge}>
-          <p>Software Engineer</p>
+          <p>{ME.title}</p>
         </span>
       </div>
       <Separator />
       <div className={styles.infoContainer}>
-        <div className={styles.infoItem}>
-          <Link
-            to={`mailto:josetomas.hlopez@gmail.com?subject=Contact request from "${window.location.href}"`}
-            target="_blank"
-          >
-            <Icon name="email" />
-          </Link>
+        <Link
+          to={`mailto:${ME.email}?subject=Contact request from "${window.location.href}"`}
+          target="_blank"
+          className={styles.infoItem}
+        >
+          <Icon name="email" />
           <div>
             <h5 className={styles.infoHeader}>EMAIL</h5>
-            <p>josetomas.hlopez@gmail.com</p>
+            <p>{ME.email}</p>
           </div>
-        </div>
-        <div className={styles.infoItem}>
-          <Link to={`tel:+34601286000`} target="_blank">
-            <Icon name="phone" />
-          </Link>
+        </Link>
+        <Link to={`tel:${ME.location.telCode}${ME.tel}`} target="_blank" className={styles.infoItem}>
+          <Icon name="phone" />
           <div>
             <h5 className={styles.infoHeader}>PHONE</h5>
-            <p>(+34) 601 28 60 00</p>
+            <p>{ME.phone}</p>
           </div>
-        </div>
+        </Link>
       </div>
       <Separator />
       <div className={styles.socialMediaContainer}>
-        {/* <Link to="https://www.linkedin.com/in/josetomas-hernandezlopez/" target="_blank">
-          <img src="/icons/linkedin.svg" alt="LinkedIn profile link" loading="lazy" />
-        </Link>
-        <Link to="https://github.com/josetomashl" target="_blank">
-          <img src="/icons/github.svg" alt="GitHub profile link" loading="lazy" />
-        </Link> */}
         <a href="#" onClick={download}>
           <Icon name={isDownloaded ? "check" : "download"} />
         </a>

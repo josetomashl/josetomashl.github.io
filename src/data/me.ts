@@ -1,45 +1,44 @@
-type Social = {
+type SocialType = {
   icon: string;
   name: string;
   link: string;
 };
-type Language = {
+type LanguageType = {
   name: string;
   qualification: "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | "Native";
 };
 
-export type Me = {
+type MeType = {
   name: string;
   surname: string;
   email: string;
+  avatar: string;
   phone: string;
+  tel: string;
   title: string;
-  social: Social[];
-  languages: Language[];
-  location: { country: string; region: string };
+  social: SocialType[];
+  languages: LanguageType[];
+  location: { country: string; region: string; telCode: string };
 };
 
-export default {
+const ME: MeType = {
   name: "José Tomás",
   surname: "Hernández López",
   email: "josetomas.hlopez@gmail.com",
-  phone: "+34 601 28 60 00",
+  phone: "(+34) 601 28 60 00",
+  tel: "601286000",
   title: "Software Engineer",
+  avatar: "/images/avatar.svg",
   social: [
     {
       name: "GitHub",
-      icon: "",
-      link: "",
+      icon: "/icons/github.svg",
+      link: "https://github.com/josetomashl",
     },
     {
       name: "LinkedIn",
-      icon: "",
-      link: "",
-    },
-    {
-      name: "GitHub",
-      icon: "",
-      link: "",
+      icon: "/icons/linkedin.svg",
+      link: "https://www.linkedin.com/in/josetomas-hernandezlopez/",
     },
   ],
   languages: [
@@ -49,5 +48,8 @@ export default {
   location: {
     country: "Spain",
     region: "Murcia",
+    telCode: "+34",
   },
-} as Me;
+};
+
+export default ME;

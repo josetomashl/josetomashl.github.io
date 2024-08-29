@@ -62,13 +62,25 @@
   justify-content: flex-start;
   align-items: center;
   gap: 24px;
+  text-decoration: none;
 }
 .infoHeader {
   text-transform: uppercase;
   color: var(--gray);
   font-weight: 400;
+  transition: all 0.2s ease;
 }
-
+.infoItem p {
+  color: var(--light);
+  transition: all 0.2s ease;
+}
+.infoItem:hover p {
+  color: var(--orange);
+}
+.infoItem:hover .infoHeader {
+  color: var(--orange);
+  opacity: 0.6;
+}
 /* FOOTER */
 .socialMediaContainer {
   display: flex;

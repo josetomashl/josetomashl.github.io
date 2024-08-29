@@ -11,7 +11,7 @@ export type ProjectType = {
   };
 };
 
-export const PROJECTS: ProjectType[] = [
+const PROJECTS: ProjectType[] = [
   {
     category: "web",
     title: "title all",
@@ -34,3 +34,5 @@ export const PROJECTS: ProjectType[] = [
     image: { path: "/images/2.jpg", alt: "Description" },
   },
 ];
+
+export default PROJECTS;
