@@ -6,11 +6,10 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@/", replacement: "/src/" }],
   },
-  envPrefix: "VITE_",
   build: {
     outDir: "dist",
     assetsDir: "",
-    sourcemap: false,
+    sourcemap: true,
     minify: true,
     manifest: true,
   },
