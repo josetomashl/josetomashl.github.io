@@ -1,4 +1,4 @@
-import { type AvailableLanguages } from "@/context/languageContext";
+import type { AvailableLanguages } from "@/context/languageContext";
 
 export type LangType = { [key: string]: string };
 

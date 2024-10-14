@@ -1,6 +1,6 @@
 import Empty from "@/components/Empty";
 import Title from "@/components/Title";
-import PROJECTS, { ProjectCategoryType, ProjectType } from "@/data/projects";
+import PROJECTS, { type ProjectCategoryType, type ProjectType } from "@/data/projects";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";

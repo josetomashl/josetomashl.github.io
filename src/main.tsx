@@ -6,11 +6,11 @@ import CustomContextMenu from "./context/rightClickMenuContext";
 import "./globals.css";
 import router from "./router";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
     <LanguageProvider>
       <RouterProvider router={router} />
+      <CustomContextMenu />
     </LanguageProvider>
-    <CustomContextMenu />
   </StrictMode>
 );
