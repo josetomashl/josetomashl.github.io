@@ -1,4 +1,4 @@
-import { LangType } from "@/constants/languages";
+import type { LangType } from "@/constants/languages";
 
 export default {
   LANG_EN: "Inglés",
