@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 type BackProps = {
   to?: string;
 };
+
 export default function Back(props: BackProps) {
   const [hover, setHover] = useState(false);
   return (
