@@ -6,6 +6,9 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@/", replacement: "/src/" }],
   },
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom"],
+  },
   build: {
     outDir: "dist",
     assetsDir: "",
