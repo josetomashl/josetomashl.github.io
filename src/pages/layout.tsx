@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import ProfileCard from "@/components/ProfileCard";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 export default function Layout() {
   return (

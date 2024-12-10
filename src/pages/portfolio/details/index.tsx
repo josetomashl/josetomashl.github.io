@@ -3,7 +3,7 @@ import PROJECTS, { type ProjectType } from "@/data/projects";
 import LoadingPage from "@/pages/loading";
 import NotFoundPage from "@/pages/not-found";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 
 export default function PortfolioDetailsPage() {
   const { projectId } = useParams();

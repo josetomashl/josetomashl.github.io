@@ -2,7 +2,7 @@ import Empty from "@/components/Empty";
 import Title from "@/components/Title";
 import PROJECTS, { type ProjectCategoryType, type ProjectType } from "@/data/projects";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import styles from "./styles.module.css";
 
 export default function PortfolioPage() {

@@ -3,7 +3,7 @@ import Separator from "@/components/Separator";
 import useDownload from "@/hooks/useDownload";
 import useShare from "@/hooks/useShare";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import styles from "./styles.module.css";
 
 import ME from "@/data/me";

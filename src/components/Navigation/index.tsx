@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import styles from "./styles.module.css";
 
 export default function Navigation() {

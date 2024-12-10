@@ -7,7 +7,7 @@ import NotFoundPage from "@/pages/not-found";
 import PortfolioPage from "@/pages/portfolio";
 import PortfolioDetailsPage from "@/pages/portfolio/details";
 import SettingsPage from "@/pages/settings";
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router";
 
 const router = createBrowserRouter([
   {

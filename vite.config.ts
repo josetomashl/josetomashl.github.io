@@ -7,7 +7,7 @@ export default defineConfig({
     alias: [{ find: "@/", replacement: "/src/" }],
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "react-router-dom"],
+    include: ["react", "react-dom", "react-router"],
   },
   build: {
     outDir: "dist",
