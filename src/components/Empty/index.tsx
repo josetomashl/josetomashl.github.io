@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import styles from "./styles.module.css";
+import { useEffect, useState } from 'react';
+import styles from './styles.module.scss';
 
 type EmptyProps = {
   text?: string;
 };
 
 export default function Empty(props: EmptyProps) {
-  const [content, setContent] = useState<string>("No results found.");
+  const [content, setContent] = useState<string>('No results found.');
   useEffect(() => {
     if (props.text) {
       setContent(props.text);

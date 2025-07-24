@@ -1,5 +1,5 @@
-import { Link, useLocation } from "react-router";
-import styles from "./styles.module.css";
+import { Link, useLocation } from 'react-router';
+import styles from './styles.module.scss';
 
 export default function Navigation() {
   const location = useLocation();
@@ -13,19 +13,19 @@ export default function Navigation() {
 
   return (
     <nav className={styles.container}>
-      <Link to="/about" className={checkRoute("/about")}>
+      <Link to='/about' className={checkRoute('/about')}>
         About
       </Link>
-      <Link to="/education" className={checkRoute("/education")}>
+      <Link to='/education' className={checkRoute('/education')}>
         Education
       </Link>
-      <Link to="/experience" className={checkRoute("/experience")}>
+      <Link to='/experience' className={checkRoute('/experience')}>
         Experience
       </Link>
-      <Link to="/portfolio" className={checkRoute("/portfolio")}>
+      <Link to='/portfolio' className={checkRoute('/portfolio')}>
         Portfolio
       </Link>
-      <Link to="/contact" className={checkRoute("/contact")}>
+      <Link to='/contact' className={checkRoute('/contact')}>
         Contact
       </Link>
     </nav>
