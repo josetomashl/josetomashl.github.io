@@ -1,11 +1,13 @@
-import Empty from "@/components/Empty";
-import Title from "@/components/Title";
-import PROJECTS, { type ProjectCategoryType, type ProjectType } from "@/data/projects";
-import { useEffect, useState } from "react";
-import { Link } from "react-router";
-import styles from "./styles.module.css";
+import Empty from '@/components/Empty';
+import Title from '@/components/Title';
+import PROJECTS, { type ProjectCategoryType, type ProjectType } from '@/data/projects';
+import { useTitle } from '@/hooks/useTitle';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
+import styles from './styles.module.scss';
 
 export default function PortfolioPage() {
+  useTitle('Projects');
   const [category, setCategory] = useState<ProjectCategoryType>();
   const selectCategory = (category: ProjectCategoryType) => {
     setCategory(category);
@@ -22,15 +24,15 @@ export default function PortfolioPage() {
 
   return (
     <div>
-      <Title content="Projects" />
+      <Title content='Projects' />
       <div className={styles.categories}>
         <span className={!category ? styles.selected : undefined} onClick={() => selectCategory(undefined)}>
           All
         </span>
-        <span className={category === "web" ? styles.selected : undefined} onClick={() => selectCategory("web")}>
+        <span className={category === 'web' ? styles.selected : undefined} onClick={() => selectCategory('web')}>
           Websites
         </span>
-        <span className={category === "app" ? styles.selected : undefined} onClick={() => selectCategory("app")}>
+        <span className={category === 'app' ? styles.selected : undefined} onClick={() => selectCategory('app')}>
           Applications
         </span>
       </div>
@@ -50,7 +52,7 @@ function PortfolioItem({ project }: { project: ProjectType }) {
     <Link to={`/portfolio/${project.id}`} key={project.id} className={styles.projectItem}>
       {project.image && (
         <div className={styles.projectImage}>
-          <img src={project.image.path} alt={project.image.alt} loading="lazy" />
+          <img src={project.image.path} alt={project.image.alt} loading='lazy' />
         </div>
       )}
       <div className={styles.projectDetails}>

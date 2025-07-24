@@ -1,50 +1,51 @@
-import AboutPage from "@/pages/about";
-import ContactPage from "@/pages/contact";
-import EducationPage from "@/pages/education";
-import ExperiencePage from "@/pages/experience";
-import Layout from "@/pages/layout";
-import NotFoundPage from "@/pages/not-found";
-import PortfolioPage from "@/pages/portfolio";
-import PortfolioDetailsPage from "@/pages/portfolio/details";
-import SettingsPage from "@/pages/settings";
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter, Navigate } from 'react-router';
+
+import DefaultLayout from '@/layouts/default';
+import AboutPage from '@/pages/about';
+import ContactPage from '@/pages/contact';
+import EducationPage from '@/pages/education';
+import ExperiencePage from '@/pages/experience';
+import NotFoundPage from '@/pages/not-found';
+import PortfolioPage from '@/pages/portfolio';
+import PortfolioDetailsPage from '@/pages/portfolio/details';
+import SettingsPage from '@/pages/settings';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout />,
+    path: '/',
+    element: <DefaultLayout />,
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/",
-        element: <Navigate to="/about" replace />,
+        path: '/',
+        element: <Navigate to='/about' replace />,
       },
       {
-        path: "/about",
+        path: '/about',
         element: <AboutPage />,
       },
       {
-        path: "/experience",
+        path: '/experience',
         element: <ExperiencePage />,
       },
       {
-        path: "/portfolio",
+        path: '/portfolio',
         element: <PortfolioPage />,
       },
       {
-        path: "/portfolio/:projectId",
+        path: '/portfolio/:projectId',
         element: <PortfolioDetailsPage />,
       },
       {
-        path: "/education",
+        path: '/education',
         element: <EducationPage />,
       },
       {
-        path: "/contact",
+        path: '/contact',
         element: <ContactPage />,
       },
       {
-        path: "/settings",
+        path: '/settings',
         element: <SettingsPage />,
       },
     ],

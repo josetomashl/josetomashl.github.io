@@ -33,7 +33,8 @@
   padding: 20px;
 }
 .avatarImage {
-  object-fit: fill;
+  width: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 .avatar:hover > .avatarImage {
