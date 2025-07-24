@@ -1,40 +1,46 @@
 // FONTS
-$font-heavy: "Visby Heavy";
-$font-extrabold: "Visby Extrabold";
-$font-bold: "Visby Bold";
-$font-semibold: "Visby Semibold";
-$font-medium: "Visby Medium";
-$font-regular: "Visby";
-$font-light: "Visby Light";
-$font-thin: "Visby Thin";
+$font-heavy: 'Visby Heavy';
+$font-extrabold: 'Visby Extrabold';
+$font-bold: 'Visby Bold';
+$font-semibold: 'Visby Semibold';
+$font-medium: 'Visby Medium';
+$font-regular: 'Visby';
+$font-light: 'Visby Light';
+$font-thin: 'Visby Thin';
 // italics
-$font-heavy-italic: "Visby Heavy Italic";
-$font-extrabold-italic: "Visby Extrabold Italic";
-$font-bold-italic: "Visby Bold Italic";
-$font-semibold-italic: "Visby Semibold Italic";
-$font-medium-italic: "Visby Medium Italic";
-$font-regular-italic: "Visby Italic";
-$font-light-italic: "Visby Light Italic";
-$font-thin-italic: "Visby Thin Italic";
+$font-heavy-italic: 'Visby Heavy Italic';
+$font-extrabold-italic: 'Visby Extrabold Italic';
+$font-bold-italic: 'Visby Bold Italic';
+$font-semibold-italic: 'Visby Semibold Italic';
+$font-medium-italic: 'Visby Medium Italic';
+$font-regular-italic: 'Visby Italic';
+$font-light-italic: 'Visby Light Italic';
+$font-thin-italic: 'Visby Thin Italic';
 
 // MISC
 $shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
+$shadow-white: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
 
 // COLORS
-$background: #faf9f6;
-$dark: #161616;
+$background: #141414;
+$dark: #242424;
+$light: #ebebeb;
 
-$gray: #ededed;
-$gray-light: #f8f9fa;
+$gray: #a2a2a2;
+$opacity-gray: #a2a2a291;
+$dark-gray: #3c3c3c;
 
-$primary: #316bdc;
-$secondary: #ffa627;
+$primary: #f9c784;
 
-$info: #4688f3;
-$info-background: #d4e4fb;
-$warning: #e3b240;
-$warning-background: #faf2dd;
-$success: #48be48;
-$success-background: #e4f6e6;
-$error: #ee6d61;
-$error-background: #f9dddc;
+// $info: #4688f3;
+// $info-background: #d4e4fb;
+// $warning: #e3b240;
+// $warning-background: #faf2dd;
+// $success: #48be48;
+// $success-background: #e4f6e6;
+// $error: #ee6d61;
+// $error-background: #f9dddc;
+
+// SCROLL BAR
+$scrollbar-thumb: #6baf8d;
+$scrollbar-size: 12px;

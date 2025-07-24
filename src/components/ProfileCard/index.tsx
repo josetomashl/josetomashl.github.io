@@ -50,12 +50,12 @@ export default function ProfileCard() {
       </div>
       <Separator />
       <div className={styles.socialMediaContainer}>
-        <a href='#' onClick={download}>
+        <span onClick={download}>
           <Icon name={isDownloaded ? 'check' : 'download'} />
-        </a>
-        <a href='#' onClick={share}>
+        </span>
+        <span onClick={share}>
           <Icon name={isShared ? 'check' : 'link'} />
-        </a>
+        </span>
         <Link
           to='/settings'
           className={settingsHover ? styles.rotate : undefined}

@@ -99,48 +99,25 @@
 :root {
   /* Scheme */
   color-scheme: light dark;
-  color: var(--light);
-  background-color: var(--background);
+  color: $light;
+  background-color: $background;
 
   /* Fonts */
   font-family: $font-regular, Helvetica, Inter;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* ScrollBar */
-  --sb-track-color: #232e33;
-  --sb-thumb-color: #6baf8d;
-  --sb-size: 12px;
-
-  /* Colors */
-  --background: #141414;
-  --dark: #242424;
-  --light: #ebebeb;
-  --gray: #a2a2a2;
-  --opacity-gray: #a2a2a291;
-  --dark-gray: #3c3c3c;
-  --orange: #f9c784;
-
-  /* Shadows */
-  --shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
-    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
-    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
-    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
-
-  --white-shadow: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
 }
+
 *,
 *::after,
 *::before {
-  scroll-behavior: smooth;
   margin: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
-  color: var(--light);
-  user-select: none;
 }
 body {
   margin: 0;
@@ -152,43 +129,50 @@ body {
   width: 100%;
   height: 100%;
 }
+
 ::-webkit-scrollbar {
-  width: var(--sb-size);
+  width: $scrollbar-size;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
+  background: $scrollbar-thumb;
   border-radius: 8px;
-  border: 3px solid var(--dark);
+  border: 3px solid $dark;
 }
 @supports not selector(::-webkit-scrollbar) {
   * {
-    scrollbar-color: var(--sb-thumb-color) transparent;
+    scrollbar-color: $scrollbar-thumb transparent;
   }
 }
 
 #custom-right-menu {
   position: absolute;
   min-width: 150px;
-  background-color: var(--light);
+  background-color: $light;
   border-radius: 6px;
-  box-shadow: var(--shadow);
+  box-shadow: $shadow;
   z-index: 1000;
   overflow: hidden;
-}
-#custom-right-menu a {
-  display: flex;
-  padding: 6px;
-  color: var(--dark);
-  text-decoration: none;
-  align-items: center;
-  gap: 8px;
-}
-#custom-right-menu a:hover {
-  background-color: #fff;
+
+  > * {
+    display: flex;
+    padding: 6px;
+    color: $dark;
+    text-decoration: none;
+    align-items: center;
+    gap: 8px;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    svg {
+      stroke: $dark-gray;
+    }
+  }
 }
 
 /* LAYOUT */
@@ -204,11 +188,11 @@ body {
   #pages {
     flex: 1;
     border-radius: 12px;
-    background-color: var(--dark);
+    background-color: $dark;
     height: 100%;
     padding: 20px;
     overflow-y: auto;
-    box-shadow: var(--shadow);
+    box-shadow: $shadow;
     position: relative;
   }
 }

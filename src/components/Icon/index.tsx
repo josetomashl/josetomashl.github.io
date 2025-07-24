@@ -9,7 +9,7 @@ type IconProps = {
 
 export default function Icon(props: IconProps) {
   const name = ICONS[props.name] || ICONS['settings'];
-  const color = props.color || 'var(--light)';
+  const color = props.color || '#ebebeb';
 
   return (
     <svg
