@@ -10,15 +10,18 @@
   overflow: hidden;
   gap: 18px;
   border-bottom-left-radius: 12px;
-}
-.container > * {
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-.container > *:hover {
-  color: $primary;
-}
-.current {
-  color: $primary;
-  text-decoration: underline;
+
+  > a {
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.current {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
 }
