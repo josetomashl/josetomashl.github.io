@@ -148,33 +148,6 @@ body {
   }
 }
 
-#custom-right-menu {
-  position: absolute;
-  min-width: 150px;
-  background-color: $light;
-  border-radius: 6px;
-  box-shadow: $shadow;
-  z-index: 1000;
-  overflow: hidden;
-
-  > * {
-    display: flex;
-    padding: 6px;
-    color: $dark;
-    text-decoration: none;
-    align-items: center;
-    gap: 8px;
-
-    &:hover {
-      background-color: #fff;
-    }
-
-    svg {
-      stroke: $dark-gray;
-    }
-  }
-}
-
 /* LAYOUT */
 .layout {
   display: flex;
