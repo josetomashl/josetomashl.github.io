@@ -4,13 +4,22 @@ import { useEffect, useState } from 'react';
 export type LocaleType = 'en' | 'es';
 type Translations = Record<string, string>;
 
+/**
+ * Asynchronously loads translation data for the specified language.
+ *
+ * Attempts to import a JSON file containing translations for the given `language`.
+ * If the import fails (e.g., the file does not exist), it falls back to loading
+ * the English translations and logs a warning to the console.
+ *
+ * @param language - The locale identifier (e.g., 'en', 'es', 'fr') for which to load translations.
+ * @returns A promise that resolves to the loaded `Translations` object.
+ */
 async function loadTranslations(language: LocaleType): Promise<Translations> {
   try {
     const translations = await import(`../assets/translations/${language}.json`);
     return translations.default;
   } catch {
     console.warn(`Could not load translations for language: ${language}. Default language set to English.`);
-    // Fallback to English if the specified language file is not found
     const defaultTranslations = await import(`../assets/translations/en.json`);
     return defaultTranslations.default;
   }
@@ -39,6 +48,7 @@ export default function useTranslation() {
   }, [language]);
 
   // Function to translate a given key
+  // FIXME: does not work on language changes
   const trans = (key: string, args: Record<string, string> = {}): string => {
     const template = translations[key] || key;
     return replacePlaceholders(template, args);
