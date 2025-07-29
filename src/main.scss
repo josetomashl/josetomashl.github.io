@@ -99,17 +99,31 @@
 :root {
   /* Scheme */
   color-scheme: light dark;
-  color: $light;
-  background-color: $background;
 
-  /* Fonts */
-  font-family: $font-regular, Helvetica, Inter;
-  font-size: 16px;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --background: #141414;
+  --dark: #242424;
+  --light: #ebebeb;
+  --gray: #a2a2a2;
+  --opacity-gray: #a2a2a291;
+  --dark-gray: #3c3c3c;
+  --primary: #f9c784;
+
+  --shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
+  --shadow-white: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
+}
+
+[data-theme='light'] {
+  // inverted colors
+  --background: #f0f0f0;
+  --dark: #e0e0e0;
+  --light: #242424;
+  --gray: #a2a2a2;
+  --opacity-gray: #a2a2a291;
+  --dark-gray: #a3a3a3;
+  --primary: #449ee7;
+
+  --shadow: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
+  --shadow-white: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
 }
 
 *,
@@ -124,6 +138,18 @@ body {
   height: 100dvh;
   width: 100dvw;
   overflow: hidden;
+
+  color: var(--light);
+  background-color: var(--background);
+
+  /* Fonts */
+  font-family: $font-regular, Helvetica, Inter;
+  font-size: 16px;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #root {
   width: 100%;
@@ -131,20 +157,20 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: $scrollbar-size;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb {
-  background: $scrollbar-thumb;
+  background: var(--primary);
   border-radius: 8px;
-  border: 3px solid $dark;
+  border: 3px solid var(--dark);
 }
 @supports not selector(::-webkit-scrollbar) {
   * {
-    scrollbar-color: $scrollbar-thumb transparent;
+    scrollbar-color: var(--primary) transparent;
   }
 }
 
@@ -161,11 +187,11 @@ body {
   #pages {
     flex: 1;
     border-radius: 12px;
-    background-color: $dark;
+    background-color: var(--dark);
     height: 100%;
     padding: 20px;
     overflow-y: auto;
-    box-shadow: $shadow;
+    box-shadow: var(--shadow);
     position: relative;
   }
 }
@@ -176,6 +202,6 @@ button:not(:disabled) {
 }
 
 a {
-  color: $light;
+  color: var(--light);
   text-decoration: none;
 }

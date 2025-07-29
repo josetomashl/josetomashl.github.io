@@ -1,10 +1,10 @@
 .card {
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   padding: 10px 20px;
   border-radius: 6px;
 }
 .text {
-  color: $light;
+  color: var(--light);
   font-size: 14px;
   font-style: italic;
 }

@@ -7,10 +7,10 @@
   transition: all 0.4s ease;
 }
 .categories > span:hover {
-  color: $primary;
+  color: var(--primary);
 }
 .selected {
-  color: $primary;
+  color: var(--primary);
   text-decoration: underline;
 }
 .projectsContainer {
@@ -20,9 +20,9 @@
   gap: 16px;
 }
 .projectItem {
-  background-color: $background;
+  background-color: var(--background);
   border-radius: 6px;
-  box-shadow: $shadow;
+  box-shadow: var(--shadow);
   flex-basis: 33.33%;
   text-decoration: none;
   overflow: hidden;
@@ -53,7 +53,7 @@
   /* float: right; */
   padding: 3px 6px;
   border-radius: 4px;
-  background-color: $dark;
+  background-color: var(--dark);
 }
 .projectTitle {
   font-weight: 500;
@@ -61,5 +61,5 @@
 }
 .projectDescription {
   font-size: 14px;
-  color: $gray;
+  color: var(--gray);
 }

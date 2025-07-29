@@ -5,8 +5,8 @@
     width: 100%;
     padding: 8px 12px;
     text-align: left;
-    background: $dark-gray;
-    color: $light;
+    background: var(--dark-gray);
+    color: var(--light);
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
@@ -36,7 +36,7 @@
     z-index: 1000;
     width: 100%;
     margin-top: 4px;
-    background: $dark-gray;
+    background: var(--dark-gray);
     border-radius: 4px;
     max-height: 200px;
     overflow-y: auto;
@@ -49,7 +49,7 @@
       gap: 8px;
       padding: 8px 12px;
       cursor: pointer;
-      color: $light;
+      color: var(--light);
 
       > img {
         max-width: 20px;
@@ -57,7 +57,7 @@
 
       &.selected,
       &:hover {
-        background: $opacity-gray;
+        background: var(--opacity-gray);
       }
     }
   }

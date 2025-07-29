@@ -1,5 +1,5 @@
 .container {
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   width: 42px;
   height: 42px;
   display: flex;
@@ -12,7 +12,7 @@
   transition: width 0.3s ease;
 }
 .containerHover {
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   min-width: 100px;
   width: fit-content;
   height: 42px;

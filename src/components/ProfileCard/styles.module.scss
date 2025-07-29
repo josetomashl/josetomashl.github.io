@@ -2,10 +2,10 @@
   max-width: 30%;
   width: 360px;
   border-radius: 12px;
-  background-color: $dark;
+  background-color: var(--dark);
   height: 100%;
   padding: 30px;
-  box-shadow: $shadow;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -26,7 +26,7 @@
   width: 160px;
   aspect-ratio: 1/1;
   border-radius: 20px;
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@
 }
 .badge {
   border-radius: 6px;
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   padding: 6px 18px;
 }
 
@@ -69,19 +69,19 @@
 }
 .infoHeader {
   text-transform: uppercase;
-  color: $gray;
+  color: var(--gray);
   font-weight: 400;
   transition: all 0.2s ease;
 }
 .infoItem p {
-  color: $light;
+  color: var(--light);
   transition: all 0.2s ease;
 }
 .infoItem:hover p {
-  color: $primary;
+  color: var(--primary);
 }
 .infoItem:hover .infoHeader {
-  color: $primary;
+  color: var(--primary);
   opacity: 0.6;
 }
 /* FOOTER */
@@ -92,7 +92,7 @@
   gap: 24px;
 }
 .socialMediaContainer > * {
-  background-color: $dark-gray;
+  background-color: var(--dark-gray);
   width: 42px;
   height: 42px;
   display: flex;
@@ -103,7 +103,7 @@
   cursor: pointer;
 }
 .socialMediaContainer > *:hover {
-  box-shadow: $shadow-white;
+  box-shadow: var(--shadow-white);
 }
 .rotate > * {
   -webkit-animation: spin 4s linear infinite;
