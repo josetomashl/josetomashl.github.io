@@ -19,6 +19,16 @@
     &.dropdownDisabled {
       cursor: not-allowed;
     }
+
+    > .dropdownButtonContent {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        max-width: 20px;
+      }
+    }
   }
 
   .dropdownList {
@@ -34,9 +44,16 @@
     list-style: none;
 
     .dropdownOption {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       padding: 8px 12px;
       cursor: pointer;
       color: $light;
+
+      > img {
+        max-width: 20px;
+      }
 
       &.selected,
       &:hover {

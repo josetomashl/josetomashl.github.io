@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '../Icon';
 import styles from './styles.module.scss';
 
-// FIXME: add optional icons to render left to the label
 export interface DropdownOption {
   label: string;
   value: string;
+  icon?: string;
 }
 
 type Props = {
@@ -48,7 +48,14 @@ export default function Dropdown(props: Props) {
         onClick={() => !props.disabled && setIsOpen((prev) => !prev)}
         className={`${styles.dropdownButton} ${props.disabled ? styles.dropdownDisabled : ''}`}
         disabled={props.disabled}>
-        {props.value ? trans(props.value.label) : props.label || 'Select an option'}
+        {props.value ? (
+          <div className={styles.dropdownButtonContent}>
+            {props.value.icon && <img src={props.value.icon} alt={props.value.value + ' flag'} loading='lazy' />}
+            {trans(props.value.label)}
+          </div>
+        ) : (
+          props.label || 'Select an option'
+        )}
         <Icon name={isOpen ? 'chevronUp' : 'chevronDown'} size={16} />
       </button>
       {isOpen && !props.disabled && (
@@ -58,6 +65,7 @@ export default function Dropdown(props: Props) {
               key={item.value}
               className={`${styles.dropdownOption} ${item.value === props.value?.value ? styles.selected : ''}`}
               onClick={() => handleItemClick(item)}>
+              {item.icon && <img src={item.icon} alt={item.value + ' flag'} loading='lazy' />}
               {trans(item.label)}
             </li>
           ))}
