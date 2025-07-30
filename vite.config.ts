@@ -1,20 +1,21 @@
-import react from "@vitejs/plugin-react-swc";
-import path from "node:path";
-import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react-swc';
+import path from 'node:path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  mode: "production",
+  mode: 'production',
+  base: '/CV/',
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "react-router"],
+    include: ['react', 'react-dom', 'react-router'],
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     sourcemap: true,
     minify: true,
     manifest: true,
