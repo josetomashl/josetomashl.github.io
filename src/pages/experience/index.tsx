@@ -5,8 +5,8 @@ export default function ExperiencePage() {
   useTitle('Experience');
 
   return (
-    <div>
+    <>
       <Title content='Employment History' />
-    </div>
+    </>
   );
 }

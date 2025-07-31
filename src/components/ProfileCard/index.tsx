@@ -1,17 +1,18 @@
 import Icon from '@/components/Icon';
 import Separator from '@/components/Separator';
-import useDownload from '@/hooks/useDownload';
 import useShare from '@/hooks/useShare';
+import useTranslations from '@/hooks/useTranslations';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import styles from './styles.module.scss';
 
+// DATA
 import ME from '@/data/me';
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
-  const { isDownloaded, download } = useDownload('/files/resume-ES.pdf');
   const [settingsHover, setSettgingsHover] = useState(false);
+  const { language } = useTranslations();
 
   return (
     <aside className={styles.container}>
@@ -33,6 +34,7 @@ export default function ProfileCard() {
         <Link
           to={`mailto:${ME.email}?subject=Contact request from "${window.location.href}"`}
           target='_blank'
+          rel='noopener noreferrer'
           className={styles.infoItem}>
           <Icon name='email' />
           <div>
@@ -40,7 +42,11 @@ export default function ProfileCard() {
             <p>{ME.email}</p>
           </div>
         </Link>
-        <Link to={`tel:${ME.location.telCode}${ME.tel}`} target='_blank' className={styles.infoItem}>
+        <Link
+          to={`tel:${ME.location.telCode}${ME.tel}`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.infoItem}>
           <Icon name='phone' />
           <div>
             <h5 className={styles.infoHeader}>PHONE</h5>
@@ -50,9 +56,13 @@ export default function ProfileCard() {
       </div>
       <Separator />
       <div className={styles.socialMediaContainer}>
-        <span onClick={download}>
-          <Icon name={isDownloaded ? 'check' : 'download'} />
-        </span>
+        <Link
+          to={`/files/resume-E${language === 'en' ? 'N' : 'S'}.pdf`}
+          target='_blank'
+          rel='noopener noreferrer'
+          download>
+          <Icon name='download' />
+        </Link>
         <span onClick={share}>
           <Icon name={isShared ? 'check' : 'link'} />
         </span>

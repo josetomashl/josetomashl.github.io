@@ -27,9 +27,6 @@ export default function Navigation() {
       <NavLink to='/portfolio' className={checkRoute('/portfolio')}>
         Portfolio
       </NavLink>
-      <NavLink to='/contact' className={checkRoute('/contact')}>
-        Contact
-      </NavLink>
     </nav>
   );
 }

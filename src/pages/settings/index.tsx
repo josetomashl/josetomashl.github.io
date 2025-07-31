@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 
 const availableLanguages = [
   { label: 'language_en', value: 'en', icon: '/icons/united_kingdom.svg' },
-  { label: 'language_es', value: 'es', icon: '/icons/spain.svg' },
+  { label: 'language_es', value: 'es', icon: '/icons/spain.svg' }
 ];
 
 export default function SettingsPage() {
@@ -34,7 +34,7 @@ export default function SettingsPage() {
   };
 
   return (
-    <div>
+    <>
       <Title content='Preferences' />
 
       <div className={styles.container}>
@@ -57,6 +57,6 @@ export default function SettingsPage() {
         </h4>
         <Switch checked={theme === 'dark'} onChange={handleThemeChange} label='Dark mode' />
       </div>
-    </div>
+    </>
   );
 }
