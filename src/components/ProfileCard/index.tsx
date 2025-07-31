@@ -31,6 +31,13 @@ export default function ProfileCard() {
       </div>
       <Separator />
       <div className={styles.infoContainer}>
+        <Link to={ME.social[1].link} target='_blank' rel='noopener noreferrer' className={styles.infoItem}>
+          <Icon name='globe' />
+          <div>
+            <h5 className={styles.infoHeader}>Profile</h5>
+            <p>LinkedIn</p>
+          </div>
+        </Link>
         <Link
           to={`mailto:${ME.email}?subject=Contact request from "${window.location.href}"`}
           target='_blank'
@@ -64,6 +71,7 @@ export default function ProfileCard() {
           <Icon name='download' />
         </Link>
         <span onClick={share}>
+          {/* TODO: add tooltip */}
           <Icon name={isShared ? 'check' : 'link'} />
         </span>
         <Link
