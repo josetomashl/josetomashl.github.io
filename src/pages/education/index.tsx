@@ -5,8 +5,8 @@ export default function EducationPage() {
   useTitle('Education');
 
   return (
-    <div>
+    <>
       <Title content='Training & Courses' />
-    </div>
+    </>
   );
 }

@@ -23,7 +23,7 @@ export default function PortfolioPage() {
   }, [category]);
 
   return (
-    <div>
+    <>
       <Title content='Projects' />
       <div className={styles.categories}>
         <span className={!category ? styles.selected : undefined} onClick={() => selectCategory(undefined)}>
@@ -43,7 +43,7 @@ export default function PortfolioPage() {
           <Empty />
         )}
       </div>
-    </div>
+    </>
   );
 }
 
