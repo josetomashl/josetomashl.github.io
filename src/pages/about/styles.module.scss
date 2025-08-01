@@ -1,0 +1,40 @@
+.container {
+  padding: 20px 0;
+}
+.principles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 20px;
+  gap: 20px;
+
+  > div {
+    flex: 1 1 calc(25% - 20px);
+    padding: 20px;
+    background-color: var(--gray);
+    color: var(--light);
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: default;
+
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      font-size: 1.2em;
+      font-family: $font-medium;
+    }
+
+    p {
+      font-size: 0.9em;
+      font-family: $font-light;
+    }
+
+    &:hover {
+      background-color: var(--opacity-gray);
+    }
+  }
+}
