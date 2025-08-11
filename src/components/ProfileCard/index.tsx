@@ -49,17 +49,6 @@ export default function ProfileCard() {
             <p>{ME.email}</p>
           </div>
         </Link>
-        <Link
-          to={`tel:${ME.location.telCode}${ME.tel}`}
-          target='_blank'
-          rel='noopener noreferrer'
-          className={styles.infoItem}>
-          <Icon name='phone' />
-          <div>
-            <h5 className={styles.infoHeader}>PHONE</h5>
-            <p>{ME.phone}</p>
-          </div>
-        </Link>
       </div>
       <Separator />
       <div className={styles.socialMediaContainer}>
