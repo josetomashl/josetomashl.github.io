@@ -31,13 +31,6 @@ export default function ProfileCard() {
       </div>
       <Separator />
       <div className={styles.infoContainer}>
-        <Link to={ME.social[1].link} target='_blank' rel='noopener noreferrer' className={styles.infoItem}>
-          <Icon name='globe' />
-          <div>
-            <h5 className={styles.infoHeader}>Profile</h5>
-            <p>LinkedIn</p>
-          </div>
-        </Link>
         <Link
           to={`mailto:${ME.email}?subject=Contact request from "${window.location.href}"`}
           target='_blank'
@@ -47,6 +40,20 @@ export default function ProfileCard() {
           <div>
             <h5 className={styles.infoHeader}>EMAIL</h5>
             <p>{ME.email}</p>
+          </div>
+        </Link>
+        <Link to={ME.social[1].link} target='_blank' rel='noopener noreferrer' className={styles.infoItem}>
+          <Icon name='linkedin' />
+          <div>
+            <h5 className={styles.infoHeader}>LINKEDIN</h5>
+            <p>josetomas-hernandezlopez</p>
+          </div>
+        </Link>
+        <Link to={ME.social[0].link} target='_blank' rel='noopener noreferrer' className={styles.infoItem}>
+          <Icon name='github' />
+          <div>
+            <h5 className={styles.infoHeader}>GITHUB</h5>
+            <p>josetomashl</p>
           </div>
         </Link>
       </div>
@@ -60,7 +67,6 @@ export default function ProfileCard() {
           <Icon name='download' />
         </Link>
         <span onClick={share}>
-          {/* TODO: add tooltip */}
           <Icon name={isShared ? 'check' : 'link'} />
         </span>
         <Link

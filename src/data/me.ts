@@ -28,28 +28,28 @@ const ME: MeType = {
   phone: '(+34) 601 28 60 00',
   tel: '601286000',
   title: 'Software Engineer',
-  avatar: '/images/avatar.png',
+  avatar: '/images/avatar-transparent.webp',
   social: [
     {
       name: 'GitHub',
       icon: '/icons/github.svg',
-      link: 'https://github.com/josetomashl',
+      link: 'https://github.com/josetomashl'
     },
     {
       name: 'LinkedIn',
       icon: '/icons/linkedin.svg',
-      link: 'https://www.linkedin.com/in/josetomas-hernandezlopez/',
-    },
+      link: 'https://www.linkedin.com/in/josetomas-hernandezlopez/'
+    }
   ],
   languages: [
     { name: 'English', qualification: 'B2' },
-    { name: 'Spanish', qualification: 'Native' },
+    { name: 'Spanish', qualification: 'Native' }
   ],
   location: {
     country: 'Spain',
     region: 'Murcia',
-    telCode: '+34',
-  },
+    telCode: '+34'
+  }
 };
 
 export default ME;

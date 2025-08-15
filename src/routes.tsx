@@ -14,12 +14,12 @@ export default function AppRoutes() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route index element={<AboutPage />} />
+          <Route path='education' element={<EducationPage />} />
           <Route path='experience' element={<ExperiencePage />} />
           <Route path='portfolio'>
             <Route index element={<PortfolioPage />} />
             <Route path=':projectId' element={<PortfolioDetailsPage />} />
           </Route>
-          <Route path='education' element={<EducationPage />} />
           <Route path='settings' element={<SettingsPage />} />
         </Route>
 

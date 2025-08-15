@@ -12,11 +12,11 @@ export default function NotFoundPage() {
         justifyContent: 'center',
         alignItems: 'center',
         gap: '16px',
-        height: '100%',
+        height: '100%'
       }}>
-      <h1>Oops!</h1>
+      <h2>Oops!</h2>
       <p>The requested resource was not found...</p>
-      <Link to={'/'}>Go back Home!</Link>
+      <Link to='/'>Go back Home!</Link>
     </div>
   );
 }

@@ -13,102 +13,110 @@
   align-items: center;
   gap: 20px;
   position: relative;
-}
 
-/* HEADER */
-.profileContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.avatar {
-  width: 160px;
-  aspect-ratio: 1/1;
-  border-radius: 20px;
-  background-color: var(--dark-gray);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.avatarImage {
-  width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  border-radius: 100%;
-  overflow: hidden;
-}
-.avatar:hover > .avatarImage {
-  transform: scale(1.2);
-}
-.name {
-  text-align: center;
-}
-.badge {
-  border-radius: 6px;
-  background-color: var(--dark-gray);
-  padding: 6px 18px;
-}
+  /* HEADER */
+  .profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-/* CONTACT DETAILS */
-.infoContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-}
-.infoItem {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 24px;
-  text-decoration: none;
-}
-.infoHeader {
-  text-transform: uppercase;
-  color: var(--gray);
-  font-weight: 400;
-  transition: all 0.2s ease;
-}
-.infoItem p {
-  color: var(--light);
-  transition: all 0.2s ease;
-}
-.infoItem:hover p {
-  color: var(--primary);
-}
-.infoItem:hover .infoHeader {
-  color: var(--primary);
-  opacity: 0.6;
-}
-/* FOOTER */
-.socialMediaContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-}
-.socialMediaContainer > * {
-  background-color: var(--dark-gray);
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-.socialMediaContainer > *:hover {
-  box-shadow: var(--shadow-white);
-}
-.rotate > * {
-  -webkit-animation: spin 4s linear infinite;
-  -moz-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+    .avatar {
+      width: 160px;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      background-color: var(--dark-gray);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .avatarImage {
+        width: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+      }
+    }
+
+    .name {
+      text-align: center;
+    }
+
+    .badge {
+      border-radius: 6px;
+      background-color: var(--dark-gray);
+      padding: 6px 18px;
+    }
+  }
+
+  /* CONTACT DETAILS */
+  .infoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    .infoItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+      text-decoration: none;
+
+      .infoHeader {
+        text-transform: uppercase;
+        color: var(--gray);
+        font-weight: 400;
+        transition: all 0.2s ease;
+      }
+      > p {
+        color: var(--light);
+        transition: all 0.2s ease;
+      }
+      &:hover {
+        > p {
+          color: var(--primary);
+        }
+        .infoHeader {
+          color: var(--primary);
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  /* FOOTER */
+  .socialMediaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    > * {
+      background-color: var(--dark-gray);
+      width: 42px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      transition: all 0.4s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: var(--shadow-white);
+      }
+    }
+
+    .rotate > * {
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+    }
+  }
 }
 
 @-moz-keyframes spin {
