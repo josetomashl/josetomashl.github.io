@@ -97,33 +97,7 @@
 }
 
 :root {
-  /* Scheme */
-  color-scheme: light dark;
-
-  --background: #141414;
-  --dark: #242424;
-  --light: #ebebeb;
-  --gray: #a2a2a2;
-  --opacity-gray: #a2a2a291;
-  --dark-gray: #3c3c3c;
-  --primary: #f9c784;
-
-  --shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
-  --shadow-white: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
-}
-
-[data-theme='light'] {
-  // inverted colors
-  --background: #f0f0f0;
-  --dark: #e0e0e0;
-  --light: #242424;
-  --gray: #a2a2a2;
-  --opacity-gray: #a2a2a291;
-  --dark-gray: #a3a3a3;
-  --primary: #449ee7;
-
-  --shadow: 0px 0px 10px 1px rgba(200, 200, 200, 0.4);
-  --shadow-white: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
+  color-scheme: dark;
 }
 
 *,
@@ -139,8 +113,8 @@ body {
   width: 100dvw;
   overflow: hidden;
 
-  color: var(--light);
-  background-color: var(--background);
+  color: $light;
+  background-color: $background;
 
   /* Fonts */
   font-family: $font-regular, Helvetica, Inter;
@@ -164,13 +138,13 @@ body {
   border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: $primary;
   border-radius: 8px;
-  border: 3px solid var(--dark);
+  border: 3px solid $dark;
 }
 @supports not selector(::-webkit-scrollbar) {
   * {
-    scrollbar-color: var(--primary) transparent;
+    scrollbar-color: $primary transparent;
   }
 }
 
@@ -187,11 +161,11 @@ body {
   #pages {
     flex: 1;
     border-radius: 12px;
-    background-color: var(--dark);
+    background-color: $dark;
     height: 100%;
     padding: 20px;
     overflow-y: auto;
-    box-shadow: var(--shadow);
+    box-shadow: $shadow-dark;
     position: relative;
   }
 }
@@ -202,6 +176,6 @@ button:not(:disabled) {
 }
 
 a {
-  color: var(--light);
+  color: $light;
   text-decoration: none;
 }

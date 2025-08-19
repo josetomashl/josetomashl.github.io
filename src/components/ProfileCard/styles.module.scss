@@ -2,10 +2,10 @@
   max-width: 30%;
   width: 360px;
   border-radius: 12px;
-  background-color: var(--dark);
+  background-color: $dark;
   height: 100%;
   padding: 30px;
-  box-shadow: var(--shadow);
+  box-shadow: $shadow-dark;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -25,7 +25,7 @@
       width: 160px;
       aspect-ratio: 1/1;
       border-radius: 20px;
-      background-color: var(--dark-gray);
+      background-color: $dark-gray;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -45,7 +45,7 @@
 
     .badge {
       border-radius: 6px;
-      background-color: var(--dark-gray);
+      background-color: $dark-gray;
       padding: 6px 18px;
     }
   }
@@ -68,20 +68,20 @@
 
       .infoHeader {
         text-transform: uppercase;
-        color: var(--gray);
+        color: $gray;
         font-weight: 400;
         transition: all 0.2s ease;
       }
       > p {
-        color: var(--light);
+        color: $light;
         transition: all 0.2s ease;
       }
       &:hover {
         > p {
-          color: var(--primary);
+          color: $primary;
         }
         .infoHeader {
-          color: var(--primary);
+          color: $primary;
           opacity: 0.6;
         }
       }
@@ -96,7 +96,7 @@
     gap: 24px;
 
     > * {
-      background-color: var(--dark-gray);
+      background-color: $dark-gray;
       width: 42px;
       height: 42px;
       display: flex;
@@ -107,7 +107,7 @@
       cursor: pointer;
 
       &:hover {
-        box-shadow: var(--shadow-white);
+        box-shadow: $shadow-light;
       }
     }
 

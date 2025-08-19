@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--dark-gray);
+  background-color: $dark-gray;
   padding: 16px 32px;
   display: flex;
   justify-content: space-evenly;
@@ -16,11 +16,11 @@
     transition: all 0.4s ease;
 
     &:hover {
-      color: var(--primary);
+      color: $primary;
     }
 
     &.current {
-      color: var(--primary);
+      color: $primary;
       text-decoration: underline;
     }
   }

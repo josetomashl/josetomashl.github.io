@@ -1,9 +1,7 @@
 import Dropdown, { type DropdownOption } from '@/components/Dropdown';
 import Icon from '@/components/Icon';
-import Switch from '@/components/Switch';
 import Title from '@/components/Title';
 import type { LocaleType } from '@/context/languageContext';
-import useTheme from '@/hooks/useTheme';
 import { useTitle } from '@/hooks/useTitle';
 import useTranslations from '@/hooks/useTranslations';
 import { useState } from 'react';
@@ -26,13 +24,6 @@ export default function SettingsPage() {
     setLanguage(value.value as LocaleType);
   };
 
-  const { theme, setTheme } = useTheme();
-  // const [darkTheme, setDarkTheme] = useLocalStorage('THEME', 'dark');
-  const handleThemeChange = (value: boolean) => {
-    setTheme(value ? 'dark' : 'light');
-    // setDarkTheme(value ? 'dark' : 'light');
-  };
-
   return (
     <>
       <Title content='Preferences' />
@@ -48,14 +39,6 @@ export default function SettingsPage() {
           onChange={handleLanguageChange}
           label='Choose your preferred language'
         />
-      </div>
-
-      <div className={styles.container}>
-        <h4>
-          <Icon name='brush' size={20} />
-          Theme
-        </h4>
-        <Switch checked={theme === 'dark'} onChange={handleThemeChange} label='Dark mode' />
       </div>
     </>
   );
