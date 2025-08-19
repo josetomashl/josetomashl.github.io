@@ -10,19 +10,19 @@
   .track {
     width: 48px;
     height: 24px;
-    background-color: var(--gray);
+    background-color: $gray;
     border-radius: 20px;
     position: relative;
     transition: background-color 0.3s ease;
 
     &.disabled {
-      background-color: var(--opacity-gray);
+      background-color: $opacity-gray;
     }
     &.checked {
-      background-color: var(--primary);
+      background-color: $primary;
 
       > .thumb {
-        background-color: var(--dark-gray);
+        background-color: $dark-gray;
         transform: translateX(24px);
       }
     }
@@ -33,7 +33,7 @@
       left: 4px;
       width: 16px;
       height: 16px;
-      background-color: var(--light);
+      background-color: $light;
       border-radius: 50%;
       transition: all 0.3s ease;
     }

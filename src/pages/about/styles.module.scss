@@ -13,8 +13,8 @@
   > div {
     flex: 1 1 calc(25% - 20px);
     padding: 20px;
-    background-color: var(--gray);
-    color: var(--light);
+    background-color: $gray;
+    color: $light;
     border-radius: 6px;
     font-weight: bold;
     transition: background-color 0.3s;
@@ -35,7 +35,7 @@
     }
 
     &:hover {
-      background-color: var(--opacity-gray);
+      background-color: $opacity-gray;
     }
   }
 }
