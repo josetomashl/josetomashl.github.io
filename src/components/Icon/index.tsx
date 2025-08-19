@@ -10,7 +10,7 @@ type IconProps = {
 
 export default function Icon(props: IconProps) {
   const name = ICONS[props.name] || ICONS['settings'];
-  const color = props.color || '$light)';
+  const color = props.color || '#ebebeb';
   const size = props.size || 24;
 
   return (
