@@ -1,4 +1,5 @@
 import { type IconName, ICONS } from '@/constants/icons';
+import { useState } from 'react';
 
 type IconProps = {
   name: IconName;
@@ -6,25 +7,32 @@ type IconProps = {
   strokeWidth?: number;
   filled?: boolean;
   size?: number;
+  hoverColor?: string;
 };
 
-export default function Icon(props: IconProps) {
-  const name = ICONS[props.name] || ICONS['settings'];
-  const color = props.color || '#ebebeb';
-  const size = props.size || 24;
+export default function Icon({
+  size = 24,
+  color = '#ebebeb',
+  name = 'settings',
+  filled = false,
+  strokeWidth = 2,
+  hoverColor = color
+}: IconProps) {
+  const [currentColor, setCurrentColor] = useState(color);
 
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
+      onMouseEnter={() => setCurrentColor(hoverColor)}
+      onMouseLeave={() => setCurrentColor(color)}
       viewBox='0 0 24 24'
-      fill='none'
-      strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
       role='img'>
-      <path d={name} fill={props.filled ? color : 'none'} stroke={color} />
+      <path d={ICONS[name]} fill={filled ? currentColor : 'none'} stroke={currentColor} />
     </svg>
   );
 }

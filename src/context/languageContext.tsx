@@ -1,7 +1,7 @@
+import type { LocaleType } from '@/constants/languages';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { loadTranslations, replacePlaceholders, type Translations } from '@/utils/language';
 import { createContext, type PropsWithChildren, useCallback, useEffect, useState } from 'react';
-
-type Translations = Record<string, string>;
 
 interface ContextProps {
   language: LocaleType | null;
@@ -9,11 +9,7 @@ interface ContextProps {
   trans: (key: string, args?: Translations) => string;
 }
 
-const LanguageContext = createContext<ContextProps>({
-  language: null,
-  trans: () => 'Not translated',
-  setLanguage: () => undefined,
-});
+const LanguageContext = createContext<ContextProps | null>(null);
 
 const LanguageProvider = (props: PropsWithChildren) => {
   // Determine the default language from the browser or user system
@@ -30,7 +26,7 @@ const LanguageProvider = (props: PropsWithChildren) => {
 
   // Function to translate a given key
   const trans = useCallback(
-    (key: string, args: Record<string, string> = {}): string => {
+    (key: string, args: Translations = {}): string => {
       const template = translations[key] || key;
       if (Object.keys(args).length === 0) {
         return template;
@@ -45,7 +41,7 @@ const LanguageProvider = (props: PropsWithChildren) => {
       value={{
         language,
         setLanguage,
-        trans,
+        trans
       }}>
       {props.children}
     </LanguageContext.Provider>
@@ -53,33 +49,3 @@ const LanguageProvider = (props: PropsWithChildren) => {
 };
 
 export { LanguageContext, LanguageProvider };
-export type LocaleType = 'en' | 'es';
-
-/**
- * Asynchronously loads translation data for the specified language.
- *
- * Attempts to import a JSON file containing translations for the given `language`.
- * If the import fails (e.g., the file does not exist), it falls back to loading
- * the English translations and logs a warning to the console.
- *
- * @param language - The locale identifier (e.g., 'en', 'es', 'fr') for which to load translations.
- * @returns A promise that resolves to the loaded `Translations` object.
- */
-async function loadTranslations(language: LocaleType): Promise<Translations> {
-  try {
-    const translations = await import(`../assets/translations/${language}.json`);
-    return translations.default;
-  } catch {
-    console.warn(`Could not load translations for language: ${language}. Default language set to English.`);
-    const defaultTranslations = await import(`../assets/translations/en.json`);
-    return defaultTranslations.default;
-  }
-}
-
-/**
- * Replaces placeholders in a string with provided arguments.
- * Placeholders should be in the format `{{key}}`.
- */
-function replacePlaceholders(template: string, args: Record<string, string>): string {
-  return template.replace(/{{(.*?)}}/g, (_, key) => args[key] || `{${key}}`);
-}

@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '../Icon';
 import styles from './styles.module.scss';
 
-export interface DropdownOption {
+export type DropdownOption<T = string> = {
   label: string;
-  value: string;
+  value: T;
   icon?: string;
-}
+};
 
 type Props = {
   label?: string;
