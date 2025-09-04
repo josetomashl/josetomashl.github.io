@@ -1,16 +1,11 @@
 import Dropdown, { type DropdownOption } from '@/components/Dropdown';
 import Icon from '@/components/Icon';
 import Title from '@/components/Title';
-import type { LocaleType } from '@/context/languageContext';
+import { availableLanguages, type LocaleType } from '@/constants/languages';
 import { useTitle } from '@/hooks/useTitle';
 import useTranslations from '@/hooks/useTranslations';
 import { useState } from 'react';
 import styles from './styles.module.scss';
-
-const availableLanguages = [
-  { label: 'language_en', value: 'en', icon: '/icons/united_kingdom.svg' },
-  { label: 'language_es', value: 'es', icon: '/icons/spain.svg' }
-];
 
 export default function SettingsPage() {
   useTitle('Preferences');

@@ -1,5 +1,4 @@
 type SocialType = {
-  icon: string;
   name: string;
   link: string;
 };
@@ -32,12 +31,10 @@ const ME: MeType = {
   social: [
     {
       name: 'GitHub',
-      icon: '/icons/github.svg',
       link: 'https://github.com/josetomashl'
     },
     {
       name: 'LinkedIn',
-      icon: '/icons/linkedin.svg',
       link: 'https://www.linkedin.com/in/josetomas-hernandezlopez/'
     }
   ],
