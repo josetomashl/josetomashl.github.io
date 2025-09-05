@@ -17,7 +17,7 @@ type MeType = {
   title: string;
   social: SocialType[];
   languages: LanguageType[];
-  location: { country: string; region: string; telCode: string };
+  location: { country: string; region: string };
 };
 
 const ME: MeType = {
@@ -42,11 +42,7 @@ const ME: MeType = {
     { name: 'English', qualification: 'B2' },
     { name: 'Spanish', qualification: 'Native' }
   ],
-  location: {
-    country: 'Spain',
-    region: 'Murcia',
-    telCode: '+34'
-  }
+  location: { country: 'Spain', region: 'Murcia' }
 };
 
 export default ME;

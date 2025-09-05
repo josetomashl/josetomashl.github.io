@@ -1,5 +1,5 @@
 .container {
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .principles {
@@ -7,13 +7,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  margin: 20px;
+  margin: 20px 10px;
   gap: 20px;
 
   > div {
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 calc(50% - 20px);
     padding: 20px;
-    background-color: $gray;
+    background-color: $dark-gray;
     color: $light;
     border-radius: 6px;
     font-weight: bold;
@@ -26,16 +26,27 @@
       justify-content: space-between;
       margin-bottom: 14px;
       font-size: 1.2em;
-      font-family: $font-medium;
     }
 
-    p {
-      font-size: 0.9em;
+    span {
       font-family: $font-light;
     }
 
     &:hover {
       background-color: $opacity-gray;
+
+      > h4 {
+        color: $primary;
+      }
     }
+  }
+}
+
+.personal {
+  > div {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 20px;
   }
 }

@@ -26,9 +26,7 @@ export default function ProfileCard() {
           <br />
           {ME.surname}
         </h1>
-        <span className={styles.badge}>
-          <p>{ME.title}</p>
-        </span>
+        <span className={styles.badge}>{ME.title}</span>
       </div>
       <Separator />
       <div className={styles.infoContainer}>

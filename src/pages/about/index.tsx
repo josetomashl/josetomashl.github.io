@@ -1,5 +1,6 @@
 import Icon from '@/components/Icon';
 import Title from '@/components/Title';
+import ME from '@/data/me';
 import styles from './styles.module.scss';
 
 export default function AboutPage() {
@@ -27,30 +28,53 @@ export default function AboutPage() {
           <div>
             <h4>
               Committed
-              <Icon name='shield' size={24} />
+              <Icon name='shield' size={32} />
             </h4>
             <span>Strong belief in the product and its value.</span>
           </div>
           <div>
             <h4>
               Proactive
-              <Icon name='rocket' size={24} />
+              <Icon name='rocket' size={32} />
             </h4>
-            <span>Always looking for ways to improve and innovate.</span>
+            <span>Always looking for improvement and innovation.</span>
           </div>
           <div>
             <h4>
               Collaborative
-              <Icon name='group' size={24} />
+              <Icon name='group' size={32} />
             </h4>
             <span>Believes in the power of teamwork and communication.</span>
           </div>
           <div>
             <h4>
               Self-taught
-              <Icon name='education' size={24} />
+              <Icon name='education' size={32} />
             </h4>
-            <span>Constantly seeking knowledge and new skills to improve.</span>
+            <span>Seize every opportunity to learn something new.</span>
+          </div>
+        </div>
+      </section>
+      <section className={styles.container}>
+        <h3>Personal details</h3>
+        <div className={styles.personal}>
+          <div>
+            <Icon name='pin' size={22} />
+            <span>
+              Location: {ME.location.region}, {ME.location.country}
+            </span>
+          </div>
+          <div>
+            <Icon name='computer' size={22} />
+            <span>Work preferences: Hybrid ({ME.location.country}) / Fully Remote</span>
+          </div>
+          <div>
+            <Icon name='languages' size={22} />
+            <span>{ME.languages.map((lang) => lang.name + ' (' + lang.qualification + ')').join(', ')}</span>
+          </div>
+          <div>
+            <Icon name='chatInProgress' size={22} />
+            <span>Availability: 09:00 - 14:00 / 15:00 - 18:00 (M-F)</span>
           </div>
         </div>
       </section>

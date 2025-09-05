@@ -175,6 +175,16 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-semibold;
+  letter-spacing: 0.4px;
+}
+
 p {
   margin-bottom: 0.6em;
 }
