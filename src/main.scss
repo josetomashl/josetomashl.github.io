@@ -175,6 +175,10 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+p {
+  margin-bottom: 0.6em;
+}
+
 a {
   color: $light;
   text-decoration: none;
