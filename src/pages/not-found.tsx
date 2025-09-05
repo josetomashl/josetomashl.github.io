@@ -1,5 +1,6 @@
-import { useTitle } from '@/hooks/useTitle';
 import { Link } from 'react-router';
+
+import { useTitle } from '@/hooks/useTitle';
 
 export default function NotFoundPage() {
   useTitle('Page Not Found');

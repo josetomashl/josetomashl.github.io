@@ -1,10 +1,11 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import { LanguageProvider } from './context/languageContext';
-import './main.scss';
-import AppRoutes from './routes';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+import { LanguageProvider } from '@/context/languageContext';
+import AppRoutes from '@/routes';
+import './main.scss';
+
+createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <LanguageProvider>
       <AppRoutes />

@@ -1,5 +1,6 @@
-import { type StorageKey, StorageKeys } from '@/constants/storage';
 import { useState } from 'react';
+
+import { type StorageKey, StorageKeys } from '@/constants/storage';
 
 export function useLocalStorage<T = string>(key: StorageKey, defaultValue?: T): [T | null, (value: T) => void] {
   const [storedValue, setStoredValue] = useState<T | null>(() => {

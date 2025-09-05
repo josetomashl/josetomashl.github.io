@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
+
 import Empty from '@/components/Empty';
 import Title from '@/components/Title';
 import PROJECTS, { type ProjectCategoryType, type ProjectType } from '@/data/projects';
 import { useTitle } from '@/hooks/useTitle';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
 import styles from './styles.module.scss';
 
 export default function PortfolioPage() {

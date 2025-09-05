@@ -1,7 +1,8 @@
+import { createContext, type PropsWithChildren, useCallback, useEffect, useState } from 'react';
+
 import type { LocaleType } from '@/constants/languages';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { loadTranslations, replacePlaceholders, type Translations } from '@/utils/language';
-import { createContext, type PropsWithChildren, useCallback, useEffect, useState } from 'react';
 
 interface ContextProps {
   language: LocaleType | null;

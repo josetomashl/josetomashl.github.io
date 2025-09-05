@@ -1,9 +1,9 @@
+import { useEffect, useState } from 'react';
+import { Navigate, useParams } from 'react-router';
+
 import Back from '@/components/Back';
 import PROJECTS, { type ProjectType } from '@/data/projects';
 import { useTitle } from '@/hooks/useTitle';
-import NotFoundPage from '@/pages/not-found';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 
 export default function PortfolioDetailsPage() {
   const { projectId } = useParams();
@@ -18,7 +18,7 @@ export default function PortfolioDetailsPage() {
   useTitle(projectDetails?.title || 'Project Details');
 
   if (!projectDetails) {
-    return <NotFoundPage />;
+    return <Navigate to='/not-found' replace />;
   }
 
   return (

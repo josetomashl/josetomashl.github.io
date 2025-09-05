@@ -1,10 +1,11 @@
+import { useState } from 'react';
+
 import Dropdown, { type DropdownOption } from '@/components/Dropdown';
 import Icon from '@/components/Icon';
 import Title from '@/components/Title';
 import { availableLanguages, type LocaleType } from '@/constants/languages';
 import { useTitle } from '@/hooks/useTitle';
 import useTranslations from '@/hooks/useTranslations';
-import { useState } from 'react';
 import styles from './styles.module.scss';
 
 export default function SettingsPage() {
