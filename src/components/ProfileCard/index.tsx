@@ -1,9 +1,10 @@
+import { useState } from 'react';
+import { Link } from 'react-router';
+
 import Icon from '@/components/Icon';
 import Separator from '@/components/Separator';
 import useShare from '@/hooks/useShare';
 import useTranslations from '@/hooks/useTranslations';
-import { useState } from 'react';
-import { Link } from 'react-router';
 import styles from './styles.module.scss';
 
 // DATA

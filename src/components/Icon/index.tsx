@@ -1,5 +1,6 @@
-import { type IconName, ICONS } from '@/constants/icons';
 import { useState } from 'react';
+
+import { type IconName, ICONS } from '@/constants/icons';
 
 type IconProps = {
   name: IconName;

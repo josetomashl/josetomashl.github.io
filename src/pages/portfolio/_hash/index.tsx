@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router';
 
 import Back from '@/components/Back';
@@ -7,14 +6,7 @@ import { useTitle } from '@/hooks/useTitle';
 
 export default function PortfolioDetailsPage() {
   const { projectId } = useParams();
-  const [projectDetails, setProjectDetails] = useState<ProjectType>();
-
-  useEffect(() => {
-    if (projectId && typeof projectId === 'string') {
-      setProjectDetails(PROJECTS.find((project) => project.id === projectId));
-    }
-  }, [projectId]);
-
+  const projectDetails: ProjectType | undefined = PROJECTS.find((project) => project.id === projectId);
   useTitle(projectDetails?.title || 'Project Details');
 
   if (!projectDetails) {

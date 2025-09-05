@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import Icon from '../Icon';
+
+import Icon from '@/components/Icon';
 import styles from './styles.module.scss';
 
 type BackProps = {

@@ -1,6 +1,7 @@
-import useTranslation from '@/hooks/useTranslations';
 import { useEffect, useRef, useState } from 'react';
-import Icon from '../Icon';
+
+import Icon from '@/components/Icon';
+import useTranslation from '@/hooks/useTranslations';
 import styles from './styles.module.scss';
 
 export type DropdownOption<T = string> = {
