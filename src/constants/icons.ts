@@ -1,3 +1,6 @@
+// This file contains SVG path data for various icons used in the application.
+// @source https://heroicons.com/
+
 export const ICONS = {
   chevronDown: 'm19.5 8.25-7.5 7.5-7.5-7.5',
   chevronUp: 'm4.5 15.75 7.5-7.5 7.5 7.5',
