@@ -26,11 +26,13 @@
   padding: 9px;
 }
 .text {
+  margin: 0;
   width: 0;
   opacity: 0;
 }
 .textHover {
+  margin-bottom: 0;
   width: auto;
   opacity: 1;
-  transition: all 0.3s ease;
+  transition: width, opacity 0.3s ease;
 }

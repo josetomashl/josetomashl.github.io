@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 
-import Icon from '@/components/Icon';
-import Separator from '@/components/Separator';
+import Icon from '@/components/common/Icon';
+import Separator from '@/components/common/Separator';
+import { ME } from '@/data/me';
 import useShare from '@/hooks/useShare';
 import useTranslations from '@/hooks/useTranslations';
 import styles from './styles.module.scss';
-
-// DATA
-import ME from '@/data/me';
 
 export default function ProfileCard() {
   const { isShared, share } = useShare();
@@ -19,14 +17,19 @@ export default function ProfileCard() {
     <aside className={styles.container}>
       <div className={styles.profileContainer}>
         <div className={styles.avatar}>
-          <img src={ME.avatar} alt='profile picture' loading='lazy' className={styles.avatarImage} />
+          <img
+            src='/images/avatar-transparent.webp'
+            alt='profile picture'
+            loading='lazy'
+            className={styles.avatarImage}
+          />
         </div>
         <h1 className={styles.name}>
-          {ME.name}
+          José Tomás
           <br />
-          {ME.surname}
+          Hernández López
         </h1>
-        <span className={styles.badge}>{ME.title}</span>
+        <span className={styles.badge}>Software Engineer</span>
       </div>
       <Separator />
       <div className={styles.infoContainer}>

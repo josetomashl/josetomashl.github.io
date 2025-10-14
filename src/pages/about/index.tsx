@@ -1,6 +1,6 @@
-import Icon from '@/components/Icon';
-import Title from '@/components/Title';
-import ME from '@/data/me';
+import Icon from '@/components/common/Icon';
+import Title from '@/components/common/Title';
+import { ME } from '@/data/me';
 import styles from './styles.module.scss';
 
 export default function AboutPage() {
@@ -60,13 +60,11 @@ export default function AboutPage() {
         <div className={styles.personal}>
           <div>
             <Icon name='pin' size={22} />
-            <span>
-              Location: {ME.location.region}, {ME.location.country}
-            </span>
+            <span>Location: Murcia, Spain</span>
           </div>
           <div>
             <Icon name='computer' size={22} />
-            <span>Work preferences: Hybrid ({ME.location.country}) / Fully Remote</span>
+            <span>Work preferences: Hybrid (Spain) / Fully Remote</span>
           </div>
           <div>
             <Icon name='languages' size={22} />

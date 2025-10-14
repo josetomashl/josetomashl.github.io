@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import Icon from '@/components/Icon';
+import Icon from '@/components/common/Icon';
 import useTranslation from '@/hooks/useTranslations';
 import styles from './styles.module.scss';
 

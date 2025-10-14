@@ -1,66 +1,38 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
+import { useState } from 'react';
 
-import Empty from '@/components/Empty';
-import Title from '@/components/Title';
-import PROJECTS, { type ProjectCategoryType, type ProjectType } from '@/data/projects';
+import Title from '@/components/common/Title';
+import ProjectCard from '@/components/portfolio/ProjectCard';
+import { PROJECTS, type ProjectCategoryType } from '@/data/projects';
 import { useTitle } from '@/hooks/useTitle';
 import styles from './styles.module.scss';
 
 export default function PortfolioPage() {
   useTitle('Projects');
-  const [category, setCategory] = useState<ProjectCategoryType>();
-  const selectCategory = (category: ProjectCategoryType) => {
-    setCategory(category);
-  };
 
-  const [filteredProjects, setFilteredProjects] = useState<ProjectType[]>(PROJECTS);
-  useEffect(() => {
-    if (!category) {
-      setFilteredProjects(PROJECTS);
-    } else {
-      setFilteredProjects(PROJECTS.slice().filter((project) => project.category === category));
-    }
-  }, [category]);
+  const [category, setCategory] = useState<ProjectCategoryType>();
+  const filteredProjects = PROJECTS.filter((project) => (category ? project.category === category : true));
 
   return (
     <>
       <Title content='Projects' />
       <div className={styles.categories}>
-        <span className={!category ? styles.selected : undefined} onClick={() => selectCategory(undefined)}>
+        <span className={!category ? styles.selected : undefined} onClick={() => setCategory(undefined)}>
           All
         </span>
-        <span className={category === 'web' ? styles.selected : undefined} onClick={() => selectCategory('web')}>
+        <span className={category === 'web' ? styles.selected : undefined} onClick={() => setCategory('web')}>
           Websites
         </span>
-        <span className={category === 'app' ? styles.selected : undefined} onClick={() => selectCategory('app')}>
+        <span className={category === 'app' ? styles.selected : undefined} onClick={() => setCategory('app')}>
           Applications
         </span>
       </div>
       <div className={styles.projectsContainer}>
         {filteredProjects.length ? (
-          filteredProjects.map((project, index) => <PortfolioItem key={index} project={project} />)
+          filteredProjects.map((project) => <ProjectCard key={project.id} project={project} />)
         ) : (
-          <Empty />
+          <span>No results found.</span>
         )}
       </div>
     </>
-  );
-}
-
-function PortfolioItem({ project }: { project: ProjectType }) {
-  return (
-    <Link to={`/portfolio/${project.id}`} key={project.id} className={styles.projectItem}>
-      {project.image && (
-        <div className={styles.projectImage}>
-          <img src={project.image.path} alt={project.image.alt} loading='lazy' />
-        </div>
-      )}
-      <div className={styles.projectDetails}>
-        <span className={styles.projectBadge}>{project.category}</span>
-        <p className={styles.projectTitle}>{project.title}</p>
-        <p className={styles.projectDescription}>{project.description}</p>
-      </div>
-    </Link>
   );
 }

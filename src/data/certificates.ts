@@ -2,6 +2,4 @@ type CertificateType = {
   name: string;
 };
 
-const CERTIFICATES: CertificateType[] = [];
-
-export default CERTIFICATES;
+export const CERTIFICATES: CertificateType[] = [];

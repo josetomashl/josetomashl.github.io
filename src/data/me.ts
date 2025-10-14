@@ -8,26 +8,13 @@ type LanguageType = {
 };
 
 type MeType = {
-  name: string;
-  surname: string;
   email: string;
-  avatar: string;
-  phone: string;
-  tel: string;
-  title: string;
   social: SocialType[];
   languages: LanguageType[];
-  location: { country: string; region: string };
 };
 
-const ME: MeType = {
-  name: 'José Tomás',
-  surname: 'Hernández López',
+export const ME: MeType = {
   email: 'josetomas.hlopez@gmail.com',
-  phone: '(+34) 601 28 60 00',
-  tel: '601286000',
-  title: 'Software Engineer',
-  avatar: '/images/avatar-transparent.webp',
   social: [
     {
       name: 'GitHub',
@@ -41,8 +28,5 @@ const ME: MeType = {
   languages: [
     { name: 'English', qualification: 'B2' },
     { name: 'Spanish', qualification: 'Native' }
-  ],
-  location: { country: 'Spain', region: 'Murcia' }
+  ]
 };
-
-export default ME;
