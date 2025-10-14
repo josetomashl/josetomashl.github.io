@@ -1,0 +1,10 @@
+/* AUTHOR */
+  Developer: Jose Tomas Hernandez Lopez
+  LinkedIn: josetomas-hernandezlopez
+  From: Murcia, Spain
+
+/* SITE */
+	Last update: 2025/10/14
+	Language: English / Castellano
+	Doctype: HTML5
+	IDE: Visual Studio Code

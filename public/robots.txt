@@ -1,0 +1,139 @@
+
+###################################################################################################################################
+#   ____  _                           _     _             __  
+#  | __ )(_) ___ _ ____   _____ _ __ (_) __| | ___     _  \ \ 
+#  |  _ \| |/ _ \ '_ \ \ / / _ \ '_ \| |/ _` |/ _ \   (_)  | |
+#  | |_) | |  __/ | | \ V /  __/ | | | | (_| | (_) |   _   | |
+#  |____/|_|\___|_| |_|\_/ \___|_| |_|_|\__,_|\___/   (_)  | |
+#                                                         /_/ 
+###################################################################################################################################
+
+## GENERAL SETTINGS
+User-agent: *
+
+## SITEMAP
+Sitemap: https://josetomashl.github.io/sitemap.xml
+
+## RULES
+
+Disallow: /files
+Disallow: /files/*
+Disallow: /settings
+Disallow: /portfolio/*
+
+
+## SPECIFIC BOTS SETTINGS
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Yahoo! Slurp China
+Disallow: /
+
+User-agent: YandexBot
+Disallow: / 
+
+User-agent: Yandex
+Disallow: / 
+
+User-agent: archive.org_bot
+Crawl-delay: 1
+
+User-agent: SEMrushBot
+Crawl-delay: 1
+
+User-agent: YandexImages
+Disallow: /
+
+User-agent: Baiduspider-image
+Disallow: /
+
+User-agent: noxtrumbot
+Crawl-delay: 50
+
+User-agent: msnbot
+Crawl-delay: 30
+
+User-agent: Slurp
+Crawl-delay: 10
+
+User-agent: AhrefsBot 
+Crawl-delay: 1
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: URL_Spider_Pro
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: Alexibot
+Disallow: /
+
+User-agent: Web Image Collector
+Disallow: /
+
+User-agent: Xenu's Link Sleuth 1.1c
+Disallow: /
+
+User-agent: Xenu's
+Disallow: /
+
+User-agent: Zeus
+Disallow: /
+
+User-agent: Zeus Link Scout
+Disallow: /
+
+User-agent: EroCrawler
+Disallow: /
+
+User-agent: LinkScan/8.1a Unix
+Disallow: /
+
+User-agent: Keyword Density/0.9
+Disallow: /
+
+User-agent: WebCopier v3.2a
+Disallow: /
+
+User-agent: WebCapture 2.0
+Disallow: /
+
+User-agent: WebCopier v.2.2
+Disallow: /
+
+User-agent: EtaoSpider
+Disallow: /
+
+User-agent: Black Hole
+Disallow: /
+
+User-agent: Xenu\\\'s Link Sleuth 1.1c
+Disallow: /
+
+User-agent: Xenu\\\'s
+Disallow: /
