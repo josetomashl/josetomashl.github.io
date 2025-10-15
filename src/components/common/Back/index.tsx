@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, type To } from 'react-router';
 
 import Icon from '@/components/common/Icon';
 import styles from './styles.module.scss';
 
-type BackProps = {
-  to?: string;
+type Props = {
+  to?: To;
 };
 
-export default function Back(props: BackProps) {
+export default function Back(props: Props) {
   const [hover, setHover] = useState(false);
 
   return (

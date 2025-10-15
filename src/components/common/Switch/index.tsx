@@ -2,14 +2,14 @@ import { useId } from 'react';
 
 import styles from './styles.module.scss';
 
-type ToggleProps = {
+type Props = {
   checked: boolean;
   onChange: (checked: boolean) => void;
   disabled?: boolean;
   label?: string;
 };
 
-export default function Switch({ checked, onChange, disabled = false, label = '' }: ToggleProps) {
+export default function Switch({ checked, onChange, disabled = false, label = '' }: Props) {
   const id = useId();
 
   const handleToggle = () => {

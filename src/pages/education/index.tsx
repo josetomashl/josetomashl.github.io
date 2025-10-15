@@ -1,5 +1,6 @@
 import { Activity } from 'react';
 
+import Subtitle from '@/components/common/Subtitle';
 import Title from '@/components/common/Title';
 import LanguageCard from '@/components/education/LanguageCard';
 import UniversityCard from '@/components/education/UniversityCard';
@@ -13,7 +14,7 @@ export default function EducationPage() {
     <Activity mode='visible'>
       <Title content='Training & Courses' />
       <UniversityCard />
-      <h3>Other languages</h3>
+      <Subtitle content='Other languages' />
       {ME.languages
         .filter((lang) => lang.qualification !== 'Native')
         .map((lang) => (

@@ -1,5 +1,6 @@
-import Icon from '@/components/common/Icon';
 import { Link } from 'react-router';
+
+import Icon from '@/components/common/Icon';
 import styles from './styles.module.scss';
 
 export default function UniversityCard() {

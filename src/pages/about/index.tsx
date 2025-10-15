@@ -1,4 +1,5 @@
 import Icon from '@/components/common/Icon';
+import Subtitle from '@/components/common/Subtitle';
 import Title from '@/components/common/Title';
 import { COLORS } from '@/constants/colors';
 import { ME } from '@/data/me';
@@ -16,15 +17,15 @@ export default function AboutPage() {
         I am a Full Stack Engineer specialising in Node.js and TypeScript. Throughout my career, I have solved many
         problems, giving me ample experience in server-side development, database design and management, and building
         clear and intuitive user interfaces. I adapt quickly to different environments and technologies, maintaining a
-        strong focus on code quality, scalability and the end-user experience.
+        strong focus on code quality, scalability and end-user experience.
       </p>
       <p>
         I am passionate about applying best practices and strengthening code through tests that ensure reliability and
         maintainability. I am committed to continuous learning and believe that team collaboration and effective
         communication are essential to the success of any project.
       </p>
-      <section className={styles.container}>
-        <h3>My core values</h3>
+      <section>
+        <Subtitle content='Core principles' />
         <div className={styles.principles}>
           <div>
             <h4>
@@ -56,8 +57,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className={styles.container}>
-        <h3>Personal details</h3>
+      <section>
+        <Subtitle content='Personal details' />
         <div className={styles.personal}>
           <div>
             <Icon name='pin' size={22} />

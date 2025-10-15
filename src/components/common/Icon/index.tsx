@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { COLORS } from '@/constants/colors';
 import { type IconName, ICONS } from '@/constants/icons';
 
-type IconProps = {
+type Props = {
   name: IconName;
   color?: string;
   strokeWidth?: number;
@@ -19,7 +19,7 @@ export default function Icon({
   filled = false,
   strokeWidth = 2,
   hoverColor = color
-}: IconProps) {
+}: Props) {
   const [currentColor, setCurrentColor] = useState(color);
 
   return (

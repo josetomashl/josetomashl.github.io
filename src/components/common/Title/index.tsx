@@ -1,10 +1,10 @@
 import styles from './styles.module.scss';
 
-type TitleProps = {
+type Props = {
   content: string;
 };
 
-export default function Title(props: TitleProps) {
+export default function Title(props: Props) {
   return (
     <div className={styles.container}>
       <h2>{props.content}</h2>
