@@ -7,14 +7,18 @@
   justify-content: space-between;
   align-items: stretch;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   .detailsContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    > .title > h4 {
-      font-family: $font-light;
+    > .title {
+      > h4 {
+        transition: color 0.2s ease;
+        font-family: $font-light;
+      }
     }
 
     > .info {
@@ -34,5 +38,12 @@
   > img {
     width: 120px;
     aspect-ratio: 1/1;
+  }
+
+  &:hover {
+    box-shadow: $shadow-dark;
+    h4 {
+      color: $primary;
+    }
   }
 }
