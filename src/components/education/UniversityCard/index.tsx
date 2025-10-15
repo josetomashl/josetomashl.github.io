@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 
 import Icon from '@/components/common/Icon';
+import { COLORS } from '@/constants/colors';
 import styles from './styles.module.scss';
 
 export default function UniversityCard() {
@@ -13,11 +14,11 @@ export default function UniversityCard() {
         </div>
         <div className={styles.info}>
           <div className={styles.infoContainer}>
-            <Icon name='calendar' size={20} />
+            <Icon name='calendar' size={20} color={COLORS.gray} />
             2018 - 2023
           </div>
           <div className={styles.infoContainer}>
-            <Icon name='pin' size={20} />
+            <Icon name='pin' size={20} color={COLORS.gray} />
             Cartagena, Murcia, Spain
           </div>
         </div>

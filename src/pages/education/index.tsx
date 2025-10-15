@@ -21,12 +21,7 @@ export default function EducationPage() {
       {ME.languages
         .filter((lang) => lang.qualification !== 'Native')
         .map((lang) => (
-          <LanguageCard
-            key={lang.name + lang.qualification}
-            language={lang.name}
-            year={lang.year}
-            level={lang.qualification}
-          />
+          <LanguageCard key={lang.name + lang.qualification} data={lang} />
         ))}
       <Subtitle content='Certifications' />
       <div className={styles.certificationsContainer}>

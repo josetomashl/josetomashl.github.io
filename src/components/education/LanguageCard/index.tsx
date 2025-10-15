@@ -1,19 +1,19 @@
+import type { LanguageType } from '@/data/me';
 import styles from './styles.module.scss';
 
 type Props = {
-  language: string;
-  year?: number;
-  level: string;
+  data: LanguageType;
 };
 
-export default function LanguageCard(props: Props) {
+export default function LanguageCard({ data }: Props) {
   return (
     <div className={styles.container}>
       <span>
-        {props.language}
-        {props.year && ` - ${props.year}`}
+        {data.name}
+        {data.issuer && ` - Certified by ${data.issuer}`}
+        {data.year && (data.issuer ? ` in ${data.year}` : ` (${data.year})`)}
       </span>
-      <h2>{props.level}</h2>
+      <h2>{data.qualification}</h2>
     </div>
   );
 }
