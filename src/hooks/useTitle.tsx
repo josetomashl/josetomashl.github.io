@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export function useTitle(title: string) {
+export function useTitle(defaultTitle: string) {
+  const [title, setTitle] = useState(defaultTitle);
+
   useEffect(() => {
     const previousTitle = document.title;
     document.title = title + ' | JTHL';
@@ -9,4 +11,6 @@ export function useTitle(title: string) {
       document.title = previousTitle;
     };
   }, [title]);
+
+  return { title, setTitle };
 }

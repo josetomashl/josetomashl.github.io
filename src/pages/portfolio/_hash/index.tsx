@@ -1,24 +1,31 @@
-import { Navigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 
 import Back from '@/components/common/Back';
 import { PROJECTS, type ProjectType } from '@/data/projects';
 import { useTitle } from '@/hooks/useTitle';
+import { useEffect, useState } from 'react';
 
 export default function PortfolioDetailsPage() {
-  useTitle('Project Details');
+  const navigate = useNavigate();
   const { projectId } = useParams();
+  const { setTitle } = useTitle('Loading project details...');
 
-  const projectDetails: ProjectType | undefined = PROJECTS.find((project) => project.id === projectId);
+  const [project, setProject] = useState<ProjectType | null>(null);
 
-  if (!projectId || !projectDetails) {
-    return <Navigate to='/not-found' replace />;
-  }
+  useEffect(() => {
+    if (projectId) {
+      const foundProject = PROJECTS.find((p) => p.id === projectId);
+      setProject(foundProject || null);
+      setTitle(foundProject ? foundProject.title : 'Project Not Found');
+    } else {
+      navigate('/not-found', { replace: true });
+    }
+  }, [projectId]);
 
   return (
     <>
       <Back to='/portfolio' />
-      <p>Project details: {projectId}</p>
-      <p>{JSON.stringify(projectDetails, null, 2)}</p>
+      <p>{JSON.stringify(project, null, 2)}</p>
     </>
   );
 }

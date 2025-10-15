@@ -1,0 +1,14 @@
+.container {
+  background-color: $dark-gray;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 10px 0;
+
+  h2 {
+    font-family: $font-bold;
+    font-size: 32px;
+  }
+}

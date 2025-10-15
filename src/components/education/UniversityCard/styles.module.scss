@@ -1,0 +1,38 @@
+.container {
+  background-color: $dark-gray;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  cursor: pointer;
+
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > .title > h4 {
+      font-family: $font-light;
+    }
+
+    > .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+
+  > img {
+    width: 120px;
+    aspect-ratio: 1/1;
+  }
+}
