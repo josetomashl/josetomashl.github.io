@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { COLORS } from '@/constants/colors';
 import { type IconName, ICONS } from '@/constants/icons';
 
 type IconProps = {
@@ -13,7 +14,7 @@ type IconProps = {
 
 export default function Icon({
   size = 24,
-  color = '#ebebeb',
+  color = COLORS.light,
   name = 'settings',
   filled = false,
   strokeWidth = 2,

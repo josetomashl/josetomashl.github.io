@@ -5,6 +5,7 @@ type SocialType = {
 type LanguageType = {
   name: string;
   qualification: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | 'Native';
+  year?: number;
 };
 
 type MeType = {
@@ -26,7 +27,7 @@ export const ME: MeType = {
     }
   ],
   languages: [
-    { name: 'English', qualification: 'B2' },
+    { name: 'English', qualification: 'B2', year: 2020 },
     { name: 'Spanish', qualification: 'Native' }
   ]
 };

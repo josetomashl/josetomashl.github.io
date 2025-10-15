@@ -1,5 +1,6 @@
 import Icon from '@/components/common/Icon';
 import Title from '@/components/common/Title';
+import { COLORS } from '@/constants/colors';
 import { ME } from '@/data/me';
 import styles from './styles.module.scss';
 
@@ -28,28 +29,28 @@ export default function AboutPage() {
           <div>
             <h4>
               Committed
-              <Icon name='shield' size={32} />
+              <Icon name='shield' size={32} color={COLORS.primary} />
             </h4>
             <span>Strong belief in the product and its value.</span>
           </div>
           <div>
             <h4>
               Proactive
-              <Icon name='rocket' size={32} />
+              <Icon name='rocket' size={32} color={COLORS.primary} />
             </h4>
             <span>Always looking for improvement and innovation.</span>
           </div>
           <div>
             <h4>
               Collaborative
-              <Icon name='group' size={32} />
+              <Icon name='group' size={32} color={COLORS.primary} />
             </h4>
             <span>Believes in the power of teamwork and communication.</span>
           </div>
           <div>
             <h4>
               Self-taught
-              <Icon name='education' size={32} />
+              <Icon name='education' size={32} color={COLORS.primary} />
             </h4>
             <span>Seize every opportunity to learn something new.</span>
           </div>
