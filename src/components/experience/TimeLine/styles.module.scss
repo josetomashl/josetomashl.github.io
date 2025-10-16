@@ -1,0 +1,81 @@
+$spacing: 50px;
+$date: 120px;
+$dotborder: 3px;
+$dot: 12px;
+$line: 4px;
+
+.timeline {
+  border-left: $line solid $primary;
+  margin: 30px auto 20px 200px;
+  position: relative;
+  padding: $spacing;
+  list-style: none;
+  max-width: 75%;
+
+  .event {
+    border-bottom: 1px dashed $gray;
+    padding-bottom: ($spacing * 0.5);
+    margin-bottom: $spacing;
+    position: relative;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    &:before {
+      left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
+      color: $gray;
+      content: attr(data-date);
+      text-align: right;
+      font-size: 0.8em;
+      min-width: $date;
+    }
+
+    &:after {
+      box-shadow: 0 0 0 $dotborder $primary;
+      left: ($spacing + $line + ($dot * 0.35)) * -1;
+      background: $dark-gray;
+      border-radius: 50%;
+      height: $dot;
+      width: $dot;
+      content: '';
+      top: 5px;
+    }
+
+    .title {
+      font-family: $font-bold;
+      font-size: 1.4em;
+      margin-bottom: 0;
+    }
+    .employer {
+      color: $primary;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+    .employerUnlinked {
+      color: $primary;
+      font-size: 14px;
+    }
+
+    p {
+      padding-top: 10px;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+  }
+}
