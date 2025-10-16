@@ -14,8 +14,8 @@ $line: 4px;
 
   .event {
     border-bottom: 1px dashed $gray;
-    padding-bottom: ($spacing * 0.5);
-    margin-bottom: $spacing;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
     position: relative;
 
     &:last-of-type {
