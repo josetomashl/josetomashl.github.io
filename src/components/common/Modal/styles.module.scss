@@ -1,0 +1,52 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $opacity-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+.modalContainer {
+  background-color: $dark;
+  border-radius: 8px;
+  min-width: 200px;
+  max-width: 80%;
+  max-height: 80dvh;
+  padding: 20px;
+  position: relative;
+  overflow: auto;
+  box-shadow: $shadow-dark;
+  animation: scaleIn 0.3s ease;
+}
+.modalCloseBtn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

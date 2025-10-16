@@ -26,7 +26,7 @@ export default function EducationPage() {
       <Subtitle content='Certifications' />
       <div className={styles.certificationsContainer}>
         {CERTIFICATIONS.map((cert) => (
-          <CertificationCard key={cert.link} data={cert} />
+          <CertificationCard key={cert.link + '_' + cert.name.replaceAll(' ', '-')} data={cert} />
         ))}
       </div>
     </Activity>

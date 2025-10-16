@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+  margin-bottom: 0.6em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: $font-semibold;
+  letter-spacing: 0.4px;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+}

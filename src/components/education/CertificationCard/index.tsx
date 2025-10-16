@@ -1,7 +1,9 @@
-import { Activity } from 'react';
+import { Activity, useState } from 'react';
 
 import Button from '@/components/common/Button';
-import { CertificationType } from '@/data/certificates';
+import { ImageViewer } from '@/components/common/ImageViewer';
+import { Modal } from '@/components/common/Modal';
+import type { CertificationType } from '@/data/certificates';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -9,9 +11,7 @@ type Props = {
 };
 
 export default function CertificationCard({ data }: Props) {
-  const openImageViewer = () => {
-    // TODO: implement image viewer in a separate component
-  };
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -23,8 +23,11 @@ export default function CertificationCard({ data }: Props) {
         <Activity mode={data.link ? 'visible' : 'hidden'}>
           <Button label='Verify' to={data.link} blank />
         </Activity>
-        <Button label='View' onClick={openImageViewer} />
+        <Button label='View' onClick={() => setModalOpen(true)} />
       </div>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <ImageViewer title={data.name} url={data.imagePath} />
+      </Modal>
     </div>
   );
 }
