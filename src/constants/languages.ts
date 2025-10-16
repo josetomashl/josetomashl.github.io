@@ -1,4 +1,4 @@
-import type { DropdownOption } from '@/components/Dropdown';
+import type { DropdownOption } from '@/components/common/Dropdown';
 
 export type LocaleType = 'en' | 'es';
 

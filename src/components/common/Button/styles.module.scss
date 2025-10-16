@@ -1,0 +1,12 @@
+.button {
+  padding: 6px 18px;
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+  color: $dark;
+  transition: background-color 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $primary-intense;
+  }
+}

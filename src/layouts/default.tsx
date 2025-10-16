@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router';
 
-import Navigation from '@/components/Navigation';
-import ProfileCard from '@/components/ProfileCard';
+import Navigation from '@/components/common/Navigation';
+import ProfileCard from '@/components/common/ProfileCard';
 
 export default function DefaultLayout() {
   return (
-    <div className='layout'>
+    <div id='layout'>
       <ProfileCard />
       <div id='pages'>
         <Navigation />

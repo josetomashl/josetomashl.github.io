@@ -1,0 +1,48 @@
+.container {
+  background-color: $dark-gray;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > .title {
+      > h4 {
+        transition: color 0.2s ease;
+        font-family: $font-light;
+      }
+    }
+
+    > .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+
+  > img {
+    width: 120px;
+    aspect-ratio: 1/1;
+  }
+
+  &:hover {
+    box-shadow: $shadow-dark;
+    h4 {
+      color: $primary;
+    }
+  }
+}

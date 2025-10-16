@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import Dropdown, { type DropdownOption } from '@/components/Dropdown';
-import Icon from '@/components/Icon';
-import Title from '@/components/Title';
+import Dropdown, { type DropdownOption } from '@/components/common/Dropdown';
+import Icon from '@/components/common/Icon';
+import Title from '@/components/common/Title';
 import { availableLanguages, type LocaleType } from '@/constants/languages';
 import { useTitle } from '@/hooks/useTitle';
 import useTranslations from '@/hooks/useTranslations';

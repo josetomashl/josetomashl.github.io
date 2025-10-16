@@ -2,32 +2,21 @@ type SocialType = {
   name: string;
   link: string;
 };
-type LanguageType = {
+export type LanguageType = {
   name: string;
   qualification: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | 'Native';
+  year?: number;
+  issuer?: string;
 };
 
 type MeType = {
-  name: string;
-  surname: string;
   email: string;
-  avatar: string;
-  phone: string;
-  tel: string;
-  title: string;
   social: SocialType[];
   languages: LanguageType[];
-  location: { country: string; region: string };
 };
 
-const ME: MeType = {
-  name: 'José Tomás',
-  surname: 'Hernández López',
+export const ME: MeType = {
   email: 'josetomas.hlopez@gmail.com',
-  phone: '(+34) 601 28 60 00',
-  tel: '601286000',
-  title: 'Software Engineer',
-  avatar: '/images/avatar-transparent.webp',
   social: [
     {
       name: 'GitHub',
@@ -39,10 +28,7 @@ const ME: MeType = {
     }
   ],
   languages: [
-    { name: 'English', qualification: 'B2' },
+    { name: 'English', qualification: 'B2', year: 2020, issuer: 'Cambridge' },
     { name: 'Spanish', qualification: 'Native' }
-  ],
-  location: { country: 'Spain', region: 'Murcia' }
+  ]
 };
-
-export default ME;

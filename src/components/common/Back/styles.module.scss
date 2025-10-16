@@ -1,0 +1,38 @@
+.container {
+  background-color: $dark-gray;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  margin: -10px 10px 10px -10px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+.containerHover {
+  background-color: $dark-gray;
+  min-width: 100px;
+  width: fit-content;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  margin: -10px 10px 10px -10px;
+  padding: 9px;
+}
+.text {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+.textHover {
+  margin-bottom: 0;
+  width: auto;
+  opacity: 1;
+  transition: width, opacity 0.3s ease;
+}

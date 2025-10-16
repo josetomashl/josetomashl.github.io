@@ -1,4 +1,4 @@
-import Title from '@/components/Title';
+import Title from '@/components/common/Title';
 import { useTitle } from '@/hooks/useTitle';
 
 export default function ExperiencePage() {

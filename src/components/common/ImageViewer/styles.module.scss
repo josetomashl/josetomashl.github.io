@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  img {
+    max-width: 50dvw;
+    user-select: none;
+  }
+}

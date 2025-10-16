@@ -1,0 +1,38 @@
+.certificationsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  select,
+  ::picker(select) {
+    appearance: base-select;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: $dark-gray;
+  }
+  select {
+    padding: 4px 8px;
+    &::picker-icon {
+      transition: 0.25s rotate;
+    }
+    &:open::picker-icon {
+      rotate: 180deg;
+    }
+    option:hover {
+      border-radius: 4px;
+    }
+  }
+  ::picker(select) {
+    padding: 4px;
+    margin-top: 4px;
+    box-shadow: $shadow-dark;
+    right: anchor(right);
+  }
+}
+.certificationsContainer {
+  display: flex;
+  gap: 1.25%;
+  flex-wrap: wrap;
+  align-content: start;
+}
