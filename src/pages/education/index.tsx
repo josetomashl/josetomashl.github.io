@@ -1,4 +1,4 @@
-import { Activity, useState } from 'react';
+import { useState } from 'react';
 
 import Subtitle from '@/components/common/Subtitle';
 import Title from '@/components/common/Title';
@@ -16,7 +16,7 @@ export default function EducationPage() {
   const [sort, setSort] = useState('date');
 
   return (
-    <Activity mode='visible'>
+    <>
       <Title content='Training & Courses' />
       <UniversityCard />
       <Subtitle content='Other languages' />
@@ -51,6 +51,6 @@ export default function EducationPage() {
             <CertificationCard key={cert.link + '_' + cert.name.replaceAll(' ', '-')} data={cert} />
           ))}
       </div>
-    </Activity>
+    </>
   );
 }
