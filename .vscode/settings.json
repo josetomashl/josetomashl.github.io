@@ -1,0 +1,16 @@
+{
+  "editor.wordWrap": "on",
+  "editor.autoClosingBrackets": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.trimTrailingWhitespace": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.sortImports": "always",
+    "source.removeUnusedImports": "always",
+    "source.fixAll": "always"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

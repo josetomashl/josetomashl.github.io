@@ -6,7 +6,7 @@ import '@/assets/styles/reset.scss';
 import { LanguageProvider } from '@/context/languageContext';
 import AppRoutes from '@/routes';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById('root') as HTMLDivElement).render(
   <StrictMode>
     <LanguageProvider>
       <AppRoutes />

@@ -23,7 +23,7 @@ export const Modal = (props: PropsWithChildren<Props>) => {
       document.removeEventListener('keydown', handleEsc);
       document.body.style.overflow = '';
     };
-  }, [props.isOpen, props.onClose]);
+  }, [props]);
 
   if (!props.isOpen || !modalRoot) {
     return null;

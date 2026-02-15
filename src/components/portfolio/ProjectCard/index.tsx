@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-import { ProjectType } from '@/data/projects';
+import type { ProjectType } from '@/data/projects';
 import styles from './styles.module.scss';
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
