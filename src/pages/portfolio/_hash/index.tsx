@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 import Back from '@/components/common/Back';
@@ -11,11 +11,14 @@ export default function PortfolioDetailsPage() {
   const { setTitle } = useTitle('Loading project details...');
 
   const [project, setProject] = useState<ProjectType | null>(null);
-  const handleGetProject = (id: string) => {
-    const foundProject = PROJECTS.find((p) => p.id === id);
-    setProject(foundProject || null);
-    setTitle(foundProject ? foundProject.title : 'Project Not Found');
-  };
+  const handleGetProject = useCallback(
+    (id: string) => {
+      const foundProject = PROJECTS.find((p) => p.id === id);
+      setProject(foundProject || null);
+      setTitle(foundProject ? foundProject.title : 'Project Not Found');
+    },
+    [setProject, setTitle]
+  );
 
   useEffect(() => {
     if (projectId) {
@@ -23,7 +26,7 @@ export default function PortfolioDetailsPage() {
     } else {
       navigate('/not-found', { replace: true });
     }
-  }, [projectId]);
+  }, [projectId, handleGetProject, navigate]);
 
   return (
     <>
