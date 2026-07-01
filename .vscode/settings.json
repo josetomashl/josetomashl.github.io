@@ -11,6 +11,5 @@
     "source.sortImports": "always",
     "source.removeUnusedImports": "always",
     "source.fixAll": "always"
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  }
 }
