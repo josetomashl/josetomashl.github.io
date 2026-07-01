@@ -7,17 +7,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router'],
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     outDir: 'dist',
     sourcemap: true,
     minify: true,
-    manifest: true,
+    manifest: true
   },
   css: {
     preprocessorOptions: {
@@ -25,8 +22,8 @@ export default defineConfig({
         additionalData: `
         @use "@/assets/styles/variables" as *;
         @use "@/assets/styles/mixins" as *;
-        `,
-      },
-    },
-  },
+        `
+      }
+    }
+  }
 });
